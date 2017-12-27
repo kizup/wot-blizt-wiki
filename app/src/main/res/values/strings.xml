@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WoT Blitz Helper</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="vehicle_types_mask">Типов техники: %d</string>
+    <string name="game_version">Game version</string>
+    <string name="vehicle_types">Vehicle types</string>
+    <string name="wiki_update_at">Updated at</string>
+</resources>
