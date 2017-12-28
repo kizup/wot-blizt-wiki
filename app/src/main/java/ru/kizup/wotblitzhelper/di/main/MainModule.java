@@ -2,8 +2,8 @@ package ru.kizup.wotblitzhelper.di.main;
 
 import dagger.Module;
 import dagger.Provides;
-import ru.kizup.wotblitzhelper.presentation.main.presenter.IMainPresenter;
-import ru.kizup.wotblitzhelper.presentation.main.presenter.MainPresenter;
+import ru.kizup.wotblitzhelper.presentation.presenter.main.IMainPresenter;
+import ru.kizup.wotblitzhelper.presentation.presenter.main.MainPresenter;
 
 /**
  * Created by: dpuzikov on 27.12.17.

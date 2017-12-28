@@ -3,7 +3,7 @@ package ru.kizup.wotblitzhelper.business.achievements;
 import java.util.List;
 
 import io.reactivex.Single;
-import ru.kizup.wotblitzhelper.presentation.achievements.models.Achievement;
+import ru.kizup.wotblitzhelper.models.achievements.AchievementUIModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -13,6 +13,6 @@ import ru.kizup.wotblitzhelper.presentation.achievements.models.Achievement;
 
 public interface IAchievementsInteractor {
 
-    Single<List<Achievement>> getAchievementsShortInfo();
+    Single<List<AchievementUIModel>> getAchievementsShortInfo();
 
 }

@@ -1,10 +1,10 @@
 package ru.kizup.wotblitzhelper.base;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +17,8 @@ import android.widget.Toast;
  * Skype: kizupx
  */
 
-public abstract class BaseFragment extends Fragment implements BaseView {
+public abstract class BaseFragment extends Fragment
+        implements BaseView {
 
     public abstract @LayoutRes int getLayoutId();
 
@@ -36,7 +37,11 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         onPostViewCreated(view, savedInstanceState);
     }
 
-//    @Override
+    @Override
+    public void showMessage(String message) {
+        showSnackbar(message);
+    }
+
     public void showMessage(int resId) {
         showSnackbar(resId);
     }

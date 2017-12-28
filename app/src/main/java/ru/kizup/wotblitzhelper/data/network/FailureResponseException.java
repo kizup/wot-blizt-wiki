@@ -12,6 +12,10 @@ public class FailureResponseException extends Exception {
 
     private BaseResponse.Error mError;
 
+    public FailureResponseException() {
+        super();
+    }
+
     public FailureResponseException(BaseResponse.Error error) {
         super();
         mError = error;

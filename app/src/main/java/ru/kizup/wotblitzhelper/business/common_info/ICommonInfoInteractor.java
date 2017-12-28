@@ -1,7 +1,7 @@
 package ru.kizup.wotblitzhelper.business.common_info;
 
 import io.reactivex.Single;
-import ru.kizup.wotblitzhelper.presentation.common_info.models.CommonInfo;
+import ru.kizup.wotblitzhelper.models.common_info.CommonInfoUIModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -11,6 +11,6 @@ import ru.kizup.wotblitzhelper.presentation.common_info.models.CommonInfo;
 
 public interface ICommonInfoInteractor {
 
-    Single<CommonInfo> getCommonInfo();
+    Single<CommonInfoUIModel> getCommonInfo();
 
 }

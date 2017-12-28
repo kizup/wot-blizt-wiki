@@ -7,6 +7,8 @@ import ru.kizup.wotblitzhelper.di.achievements.AchievementsComponent;
 import ru.kizup.wotblitzhelper.di.achievements.AchievementsModule;
 import ru.kizup.wotblitzhelper.di.common_info.CommonInfoComponent;
 import ru.kizup.wotblitzhelper.di.common_info.CommonInfoModule;
+import ru.kizup.wotblitzhelper.di.crew_skills.CrewSkillsComponent;
+import ru.kizup.wotblitzhelper.di.crew_skills.CrewSkillsModule;
 import ru.kizup.wotblitzhelper.di.main.MainComponent;
 import ru.kizup.wotblitzhelper.di.main.MainModule;
 
@@ -29,5 +31,7 @@ public interface AppComponent {
     CommonInfoComponent with(CommonInfoModule module);
 
     AchievementsComponent with(AchievementsModule module);
+
+    CrewSkillsComponent with(CrewSkillsModule module);
 
 }

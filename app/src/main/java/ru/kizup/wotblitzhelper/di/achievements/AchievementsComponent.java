@@ -1,7 +1,7 @@
 package ru.kizup.wotblitzhelper.di.achievements;
 
 import dagger.Subcomponent;
-import ru.kizup.wotblitzhelper.presentation.achievements.view.AchievementsFragment;
+import ru.kizup.wotblitzhelper.presentation.view.achievements.AchievementsFragment;
 
 /**
  * Created by: dpuzikov on 27.12.17.

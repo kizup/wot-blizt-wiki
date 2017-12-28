@@ -8,7 +8,22 @@
 
     <Button
         android:id="@+id/bn_common_info"
-        android:text="common info"
+        android:text="Common info"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Achievements"
+        android:textAllCaps="false"
+        android:id="@+id/bn_achievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Crew skills"
+        android:textAllCaps="false"
+        android:id="@+id/bn_crew_skills"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

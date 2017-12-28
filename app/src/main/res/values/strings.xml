@@ -5,4 +5,9 @@
     <string name="game_version">Game version</string>
     <string name="vehicle_types">Vehicle types</string>
     <string name="wiki_update_at">Updated at</string>
+    <string name="crew_skill_description_label">Описание</string>
+    <string name="crew_skill_tip_label">Подсказка</string>
+    <string name="crew_skill_features_label">Особенности</string>
+    <string name="crew_skill_effect_label">Эффект</string>
+    <string name="error_request_limit_exceeded">Превышен лимит запросов, повторите позже</string>
 </resources>

@@ -2,16 +2,15 @@ package ru.kizup.wotblitzhelper.di.common_info;
 
 import dagger.Module;
 import dagger.Provides;
-import retrofit2.Retrofit;
 import ru.kizup.wotblitzhelper.business.common_info.CommonInfoInteractor;
 import ru.kizup.wotblitzhelper.business.common_info.ICommonInfoInteractor;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
-import ru.kizup.wotblitzhelper.data.network.common_info.ICommonInfoService;
+import ru.kizup.wotblitzhelper.data.network.IApiService;
 import ru.kizup.wotblitzhelper.data.repositories.common_info.CommonInfoRepository;
 import ru.kizup.wotblitzhelper.data.repositories.common_info.ICommonInfoRepository;
-import ru.kizup.wotblitzhelper.presentation.common_info.presenter.CommonInfoCache;
-import ru.kizup.wotblitzhelper.presentation.common_info.presenter.CommonInfoPresenter;
-import ru.kizup.wotblitzhelper.presentation.common_info.presenter.ICommonInfoPresenter;
+import ru.kizup.wotblitzhelper.presentation.presenter.common_info.CommonInfoCache;
+import ru.kizup.wotblitzhelper.presentation.presenter.common_info.CommonInfoPresenter;
+import ru.kizup.wotblitzhelper.presentation.presenter.common_info.ICommonInfoPresenter;
 import ru.kizup.wotblitzhelper.utils.rx.RxSchedulersAbs;
 
 /**
@@ -27,8 +26,9 @@ public class CommonInfoModule {
     @CommonInfoScope
     ICommonInfoPresenter provideCommonInfoPresenter(ICommonInfoInteractor interactor,
                                                     RxSchedulersAbs rxSchedulersAbs,
-                                                    CommonInfoCache cache) {
-        return new CommonInfoPresenter(interactor, rxSchedulersAbs, cache);
+                                                    CommonInfoCache cache,
+                                                    ResponseValidator validator) {
+        return new CommonInfoPresenter(interactor, rxSchedulersAbs, cache, validator);
     }
 
     @Provides
@@ -39,7 +39,7 @@ public class CommonInfoModule {
 
     @Provides
     @CommonInfoScope
-    ICommonInfoRepository providesCommonInfoRepository(ICommonInfoService service) {
+    ICommonInfoRepository providesCommonInfoRepository(IApiService service) {
         return new CommonInfoRepository(service);
 //        return new CommonInfoRepositoryTest();
     }
@@ -48,12 +48,6 @@ public class CommonInfoModule {
     @CommonInfoScope
     ICommonInfoInteractor provideCommonInfoInteractor(ICommonInfoRepository repository, ResponseValidator validator) {
         return new CommonInfoInteractor(repository, validator);
-    }
-
-    @Provides
-    @CommonInfoScope
-    ICommonInfoService provideApiService(Retrofit retrofit) {
-        return retrofit.create(ICommonInfoService.class);
     }
 
 }

@@ -20,14 +20,20 @@ public class ResponseValidator {
         mContext = context;
     }
 
-    public BaseResponse.Error getErrorDescription(BaseResponse.Error error) {
+    public String getErrorDescription(BaseResponse.Error error) {
         String description;
-        switch (error.getCode()) {
-            default: description = mContext.getString(R.string.unknown_error);
+        switch (error.getMessage()) {
+            case "REQUEST_LIMIT_EXCEEDED": {
+                description = mContext.getString(R.string.error_request_limit_exceeded);
+                break;
+            }
+            default: description = getDefaultErrorDescription();
         }
+        return description;
+    }
 
-        error.setDescription(description);
-        return error;
+    public String getDefaultErrorDescription() {
+        return mContext.getString(R.string.unknown_error);
     }
 
 }

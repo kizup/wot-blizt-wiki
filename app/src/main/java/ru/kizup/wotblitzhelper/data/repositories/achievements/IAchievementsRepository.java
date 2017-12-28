@@ -1,10 +1,9 @@
 package ru.kizup.wotblitzhelper.data.repositories.achievements;
 
 import java.util.HashMap;
-import java.util.List;
 
 import io.reactivex.Single;
-import ru.kizup.wotblitzhelper.data.network.achievements.response.AchievementsModel;
+import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.

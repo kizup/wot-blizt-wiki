@@ -5,9 +5,9 @@ import java.util.List;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
-import ru.kizup.wotblitzhelper.data.network.achievements.response.AchievementsModel;
+import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.data.repositories.achievements.IAchievementsRepository;
-import ru.kizup.wotblitzhelper.presentation.achievements.models.Achievement;
+import ru.kizup.wotblitzhelper.models.achievements.AchievementUIModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -27,19 +27,28 @@ public class AchievementsInteractor implements IAchievementsInteractor {
     }
 
     @Override
-    public Single<List<Achievement>> getAchievementsShortInfo() {
+    public Single<List<AchievementUIModel>> getAchievementsShortInfo() {
         return mAchievementsRepository.getAchievementsShortInfo()
                 .flatMapObservable(map -> Observable.fromIterable(map.values()))
+                .filter(this::modelFilter)
                 .map(this::mapModel)
                 .toSortedList((o1, o2) -> o1.getOrder() - o2.getOrder());
     }
 
-    private Achievement mapModel(AchievementsModel model) {
-        return new Achievement(model.getName(),
+    private boolean modelFilter(AchievementsModel model) {
+        return model.getImage() != null
+                && !model.getImage().isEmpty()
+                && model.getName() != null
+                && !model.getName().isEmpty();
+    }
+
+    private AchievementUIModel mapModel(AchievementsModel model) {
+        return new AchievementUIModel(model.getName(),
                 model.getImage(),
-                model.getSection(),
+                model.getImageBig(),
                 model.getOrder(),
-                model.getAchievementId()
+                model.getAchievementId(),
+                model.getDescription()
         );
     }
 

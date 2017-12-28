@@ -2,7 +2,7 @@ package ru.kizup.wotblitzhelper.data.repositories.common_info;
 
 import io.reactivex.Single;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
-import ru.kizup.wotblitzhelper.data.network.common_info.response.CommonInfoModel;
+import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -12,6 +12,6 @@ import ru.kizup.wotblitzhelper.data.network.common_info.response.CommonInfoModel
 
 public interface ICommonInfoRepository {
 
-    Single<BaseResponse<CommonInfoModel>> getCommonInfo();
+    Single<CommonInfoDataModel> getCommonInfo();
 
 }

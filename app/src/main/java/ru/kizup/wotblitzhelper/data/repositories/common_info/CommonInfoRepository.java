@@ -2,9 +2,10 @@ package ru.kizup.wotblitzhelper.data.repositories.common_info;
 
 import io.reactivex.Single;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.business.common_info.CommonInfoLoadException;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
-import ru.kizup.wotblitzhelper.data.network.common_info.ICommonInfoService;
-import ru.kizup.wotblitzhelper.data.network.common_info.response.CommonInfoModel;
+import ru.kizup.wotblitzhelper.data.network.IApiService;
+import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -14,15 +15,28 @@ import ru.kizup.wotblitzhelper.data.network.common_info.response.CommonInfoModel
 
 public class CommonInfoRepository implements ICommonInfoRepository {
 
-    private ICommonInfoService mApiService;
+    private IApiService mApiService;
 
-    public CommonInfoRepository(ICommonInfoService apiService) {
+    public CommonInfoRepository(IApiService apiService) {
         mApiService = apiService;
     }
 
     @Override
-    public Single<BaseResponse<CommonInfoModel>> getCommonInfo() {
+    public Single<CommonInfoDataModel> getCommonInfo() {
         return mApiService.getCommonInfo()
+                .map(model -> {
+                    if (model == null) {
+                        throw new CommonInfoLoadException("CommonInfoUIModel is null");
+                    }
+                    return model;
+                })
+                .flatMapSingle(response -> {
+                    if (!response.isSuccess()) {
+                        return Single.error(new FailureResponseException(response.getError()));
+                    }
+                    return Single.fromCallable(() -> response);
+                })
+                .map(BaseResponse::getData)
                 .singleOrError();
     }
 }

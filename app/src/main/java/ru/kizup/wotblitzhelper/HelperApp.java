@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.squareup.picasso.Picasso;
+
 import ru.kizup.wotblitzhelper.di.application.AppComponent;
 import ru.kizup.wotblitzhelper.di.application.AppModule;
 import ru.kizup.wotblitzhelper.di.application.DaggerAppComponent;

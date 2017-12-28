@@ -1,7 +1,7 @@
 package ru.kizup.wotblitzhelper.di.main;
 
 import dagger.Subcomponent;
-import ru.kizup.wotblitzhelper.presentation.main.view.MainFragment;
+import ru.kizup.wotblitzhelper.presentation.view.main.MainFragment;
 
 /**
  * Created by: dpuzikov on 27.12.17.

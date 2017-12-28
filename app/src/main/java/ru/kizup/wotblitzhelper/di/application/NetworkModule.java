@@ -12,9 +12,9 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.kizup.wotblitzhelper.base.Constants;
-import ru.kizup.wotblitzhelper.di.common_info.CommonInfoScope;
-import ru.kizup.wotblitzhelper.utils.ApplicationIdInterceptor;
+import ru.kizup.wotblitzhelper.models.Constants;
+import ru.kizup.wotblitzhelper.data.network.IApiService;
+import ru.kizup.wotblitzhelper.utils.network.ApplicationIdInterceptor;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -57,6 +57,12 @@ public class NetworkModule {
         builder.baseUrl(Constants.API_URL);
         builder.client(client);
         return builder.build();
+    }
+
+    @Provides
+    @Singleton
+    IApiService provideApiService(Retrofit retrofit) {
+        return retrofit.create(IApiService.class);
     }
 
 }
