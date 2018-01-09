@@ -5,6 +5,7 @@ import dagger.Provides;
 import ru.kizup.wotblitzhelper.business.common_info.CommonInfoInteractor;
 import ru.kizup.wotblitzhelper.business.common_info.ICommonInfoInteractor;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
+import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
 import ru.kizup.wotblitzhelper.data.repositories.common_info.CommonInfoRepository;
 import ru.kizup.wotblitzhelper.data.repositories.common_info.ICommonInfoRepository;
@@ -33,12 +34,6 @@ public class CommonInfoModule {
 
     @Provides
     @CommonInfoScope
-    CommonInfoCache provideCommonInfoCache() {
-        return new CommonInfoCache();
-    }
-
-    @Provides
-    @CommonInfoScope
     ICommonInfoRepository providesCommonInfoRepository(IApiService service) {
         return new CommonInfoRepository(service);
 //        return new CommonInfoRepositoryTest();
@@ -46,7 +41,8 @@ public class CommonInfoModule {
 
     @Provides
     @CommonInfoScope
-    ICommonInfoInteractor provideCommonInfoInteractor(ICommonInfoRepository repository, ResponseValidator validator) {
+    ICommonInfoInteractor provideCommonInfoInteractor(ICommonInfoRepository repository,
+                                                      ResponseValidator validator) {
         return new CommonInfoInteractor(repository, validator);
     }
 

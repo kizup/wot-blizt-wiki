@@ -4,9 +4,10 @@ import java.util.HashMap;
 
 import io.reactivex.Single;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
-import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
+import ru.kizup.wotblitzhelper.data.repositories.Repository;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
 
 /**
@@ -15,17 +16,24 @@ import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
  * Skype: kizupx
  */
 
-public class CrewSkillsRepository implements ICrewSkillsRepository {
+public class CrewSkillsRepository extends Repository
+        implements ICrewSkillsRepository {
 
-    private IApiService mApiService;
-
-    public CrewSkillsRepository(IApiService apiService) {
-        mApiService = apiService;
+    public CrewSkillsRepository(IApiService apiService, IDatabaseHelper helper) {
+        super(apiService, helper);
     }
 
     @Override
     public Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkills() {
-        return mApiService.getAllCrewSkills()
+        return getDatabaseHelper().getCrewSkills()
+                .flatMap(map -> {
+                    if (map.isEmpty()) return getAllCrewSkillsFromServer();
+                    return Single.just(map);
+                });
+    }
+
+    private Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkillsFromServer() {
+        return getApiService().getAllCrewSkills()
                 .flatMapSingle(response -> {
                     if (!response.isSuccess()) {
                         return Single.error(new FailureResponseException(response.getError()));
@@ -33,20 +41,14 @@ public class CrewSkillsRepository implements ICrewSkillsRepository {
                     return Single.fromCallable(() -> response);
                 })
                 .map(BaseResponse::getData)
+                .doOnNext(this::saveCrewSkills)
                 .singleOrError();
     }
 
-    @Override
-    public Single<HashMap<String, String>> getAllVehicleTypes() {
-        return mApiService.getCommonInfo("vehicle_types")
-                .flatMapSingle(response -> {
-                    if (!response.isSuccess()) {
-                        return Single.error(new FailureResponseException(response.getError()));
-                    }
-                    return Single.fromCallable(() -> response);
-                })
-                .map(BaseResponse::getData)
-                .map(CommonInfoDataModel::getVehicleTypes)
-                .singleOrError();
+    private void saveCrewSkills(HashMap<String, CrewSkillDataModel> crewSkills) {
+        for (String key : crewSkills.keySet()) {
+            getDatabaseHelper().saveModel(crewSkills.get(key)).subscribe();
+        }
     }
+
 }

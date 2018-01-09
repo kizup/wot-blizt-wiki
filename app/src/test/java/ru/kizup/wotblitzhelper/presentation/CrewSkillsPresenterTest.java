@@ -4,16 +4,14 @@ import android.content.Context;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
-import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.Single;
 import ru.kizup.wotblitzhelper.business.crew_skills.ICrewSkillsInteractor;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillUIModel;
+import ru.kizup.wotblitzhelper.presentation.presenter.crew_skills.CrewSkillCache;
 import ru.kizup.wotblitzhelper.presentation.presenter.crew_skills.CrewSkillsPresenter;
 import ru.kizup.wotblitzhelper.presentation.presenter.crew_skills.ICrewSkillsPresenter;
 import ru.kizup.wotblitzhelper.presentation.view.crew_skills.ICrewSkillsView;
@@ -21,8 +19,6 @@ import ru.kizup.wotblitzhelper.utils.rx.RxSchedulersAbs;
 import ru.kizup.wotblitzhelper.utils.rx.RxSchedulersTest;
 
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by: dpuzikov on 28.12.17.
@@ -41,7 +37,8 @@ public class CrewSkillsPresenterTest {
     public void beforeEachTest() {
         RxSchedulersAbs rxSchedulersAbs = new RxSchedulersTest();
         mCrewSkillsInteractor = mock(ICrewSkillsInteractor.class);
-        mCrewSkillsPresenter = new CrewSkillsPresenter(mCrewSkillsInteractor, rxSchedulersAbs, new ResponseValidator(mock(Context.class)));
+        CrewSkillCache crewSkillCache = mock(CrewSkillCache.class);
+        mCrewSkillsPresenter = new CrewSkillsPresenter(mCrewSkillsInteractor, rxSchedulersAbs, new ResponseValidator(mock(Context.class)), crewSkillCache);
         mCrewSkillsView = mock(ICrewSkillsView.class);
         mModels = getUIModels();
     }

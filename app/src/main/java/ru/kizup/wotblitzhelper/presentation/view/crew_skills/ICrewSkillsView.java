@@ -25,4 +25,10 @@ public interface ICrewSkillsView extends BaseView {
 
     void showDetailCrewSkillInfo(CrewSkillUIModel model);
 
+    void showEmptySidePanel();
+
+    void hideSidePanel();
+
+    void showSidePanel(CrewSkillUIModel model);
+
 }

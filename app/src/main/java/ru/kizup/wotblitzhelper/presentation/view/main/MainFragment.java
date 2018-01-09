@@ -21,6 +21,7 @@ import ru.kizup.wotblitzhelper.presentation.view.achievements.AchievementsFragme
 import ru.kizup.wotblitzhelper.presentation.view.common_info.CommonInfoFragment;
 import ru.kizup.wotblitzhelper.presentation.presenter.main.IMainPresenter;
 import ru.kizup.wotblitzhelper.presentation.view.crew_skills.CrewSkillsFragment;
+import ru.kizup.wotblitzhelper.presentation.view.vehicles.VehiclesFragment;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -71,6 +72,11 @@ public class MainFragment extends BaseFragment
         mMainPresenter.clickOnCrewSkills();
     }
 
+    @OnClick(R.id.bn_vehicles)
+    void onVehiclesClick() {
+        mMainPresenter.clickOnVehicles();
+    }
+
     @Override
     public void showCommonInfoScreen() {
         showFragment(new CommonInfoFragment());
@@ -87,16 +93,14 @@ public class MainFragment extends BaseFragment
     }
 
     @Override
+    public void showVehiclesScreen() {
+        showFragment(VehiclesFragment.newInstance());
+    }
+
+    @Override
     public void onDestroyView() {
         mMainPresenter.unbindView();
         mUnbinder.unbind();
         super.onDestroyView();
-    }
-
-    private void showFragment(Fragment fragment) {
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.addToBackStack(null);
-        transaction.replace(R.id.fl_container, fragment);
-        transaction.commit();
     }
 }

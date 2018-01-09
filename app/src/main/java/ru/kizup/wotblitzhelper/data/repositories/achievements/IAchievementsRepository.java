@@ -3,6 +3,7 @@ package ru.kizup.wotblitzhelper.data.repositories.achievements;
 import java.util.HashMap;
 
 import io.reactivex.Single;
+import ru.kizup.wotblitzhelper.data.repositories.IRepository;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 
 /**
@@ -11,7 +12,7 @@ import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
  * Skype: kizupx
  */
 
-public interface IAchievementsRepository {
+public interface IAchievementsRepository extends IRepository {
 
     Single<HashMap<String, AchievementsModel>> getAchievementsShortInfo();
 

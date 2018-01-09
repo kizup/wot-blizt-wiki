@@ -1,12 +1,22 @@
 package ru.kizup.wotblitzhelper.data.repositories.achievements;
 
-import java.util.HashMap;
+import android.util.Log;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import io.reactivex.Observable;
 import io.reactivex.Single;
+import io.reactivex.functions.BiFunction;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
+import ru.kizup.wotblitzhelper.data.repositories.Repository;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
+import ru.kizup.wotblitzhelper.models.common_info.AchievementDao;
+import ru.kizup.wotblitzhelper.models.common_info.AchievementInfoDataModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -14,24 +24,39 @@ import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
  * Skype: kizupx
  */
 
-public class AchievementsRepository implements IAchievementsRepository {
+public class AchievementsRepository extends Repository
+        implements IAchievementsRepository {
 
-    private IApiService mAchievementsService;
-
-    public AchievementsRepository(IApiService achievementsService) {
-        mAchievementsService = achievementsService;
+    public AchievementsRepository(IApiService achievementsService, IDatabaseHelper helper) {
+        super(achievementsService, helper);
     }
 
     @Override
     public Single<HashMap<String, AchievementsModel>> getAchievementsShortInfo() {
-        return mAchievementsService.getAchievements("achievement_id,image,image_big,description,order,name")
+        return getDatabaseHelper().getAchievements()
+                .flatMap(map -> {
+                    if (map.isEmpty()) return getAchievementsFromServer();
+                    return Single.just(map);
+                });
+    }
+
+    private Single<HashMap<String, AchievementsModel>> getAchievementsFromServer() {
+        return getApiService().getAchievements("achievement_id,image,image_big,description,order,name")
                 .map(response -> {
                     if (!response.isSuccess()) {
                         throw new FailureResponseException(response.getError());
                     }
+                    saveAchievements(response.getData());
                     return response;
                 })
-                .map(BaseResponse::getData)
-                .singleOrError();
+                .map(BaseResponse::getData);
+    }
+
+    private void saveAchievements(HashMap<String, AchievementsModel> map) {
+        for (String key : map.keySet()) {
+            AchievementsModel model = map.get(key);
+            AchievementDao dao = new AchievementDao(key, model);
+            getDatabaseHelper().saveModel(dao).subscribe();
+        }
     }
 }

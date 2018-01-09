@@ -10,4 +10,5 @@
     <string name="crew_skill_features_label">Особенности</string>
     <string name="crew_skill_effect_label">Эффект</string>
     <string name="error_request_limit_exceeded">Превышен лимит запросов, повторите позже</string>
+    <string name="hint_empty_crew_skill_side_panel">Выберите умение из списка слева</string>
 </resources>

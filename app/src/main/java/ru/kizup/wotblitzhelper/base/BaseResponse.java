@@ -2,7 +2,10 @@ package ru.kizup.wotblitzhelper.base;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.HashMap;
+
 import ru.kizup.wotblitzhelper.models.Constants;
+import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -27,6 +30,8 @@ public class BaseResponse<D> {
     public BaseResponse() {
     }
 
+
+
     public String getStatus() {
         return status;
     }
@@ -41,6 +46,16 @@ public class BaseResponse<D> {
 
     public D getData() {
         return data;
+    }
+
+    public static BaseResponse errorResponse() {
+        BaseResponse response = new BaseResponse();
+        response.status = "error";
+        Error error = new Error();
+        error.code = 200;
+        error.message = "ERROR";
+        response.error = error;
+        return response;
     }
 
     public static class Error {

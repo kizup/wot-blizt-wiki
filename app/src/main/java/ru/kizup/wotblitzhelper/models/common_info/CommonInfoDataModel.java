@@ -15,7 +15,7 @@ public class CommonInfoDataModel {
 
     @SerializedName("achievement_sections")
     @Expose
-    private HashMap<String, AchievementInfoDataModel> achievments;
+    private HashMap<String, AchievementInfoDataModel> achievements;
     @SerializedName("tanks_updated_at")
     @Expose
     private Long tanksUpdatedAt;
@@ -32,7 +32,11 @@ public class CommonInfoDataModel {
     @Expose
     private String gameVersion;
 
-    public CommonInfoDataModel(Long tanksUpdatedAt, HashMap<String, String> languages, HashMap<String, String> vehicleTypes, HashMap<String, String> vehicleNations, String gameVersion) {
+    public CommonInfoDataModel(Long tanksUpdatedAt,
+                               HashMap<String, String> languages,
+                               HashMap<String, String> vehicleTypes,
+                               HashMap<String, String> vehicleNations,
+                               String gameVersion) {
         this.tanksUpdatedAt = tanksUpdatedAt;
         this.languages = languages;
         this.vehicleTypes = vehicleTypes;
@@ -43,8 +47,8 @@ public class CommonInfoDataModel {
     public CommonInfoDataModel() {
     }
 
-    public HashMap<String, AchievementInfoDataModel> getAchievments() {
-        return achievments;
+    public HashMap<String, AchievementInfoDataModel> getAchievements() {
+        return achievements;
     }
 
     public Long getTanksUpdatedAt() {

@@ -16,4 +16,6 @@ public interface ICrewSkillsPresenter extends BasePresenter<ICrewSkillsView> {
 
     void clickOnCrewSkill(CrewSkillUIModel model);
 
+    void setScreenOrientation(int orientation);
+
 }

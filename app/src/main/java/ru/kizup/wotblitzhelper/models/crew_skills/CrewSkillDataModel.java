@@ -3,16 +3,20 @@ package ru.kizup.wotblitzhelper.models.crew_skills;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
 /**
  * Created by: dpuzikov on 28.12.17.
  * e-mail: kizup.diman@gmail.com
  * Skype: kizupx
  */
 
-public class CrewSkillDataModel {
+public class CrewSkillDataModel extends RealmObject {
 
     @SerializedName("skill_id")
     @Expose
+    @PrimaryKey
     private String skillId;
     @SerializedName("features")
     @Expose
@@ -25,7 +29,7 @@ public class CrewSkillDataModel {
     private String effect;
     @SerializedName("images")
     @Expose
-    private Images images;
+    private CrewSkillImage images;
     @SerializedName("vehicle_type")
     @Expose
     private String vehicleType;
@@ -36,7 +40,13 @@ public class CrewSkillDataModel {
     public CrewSkillDataModel() {
     }
 
-    public CrewSkillDataModel(String skillId, String features, String tip, String effect, Images images, String vehicleType, String name) {
+    public CrewSkillDataModel(String skillId,
+                              String features,
+                              String tip,
+                              String effect,
+                              CrewSkillImage images,
+                              String vehicleType,
+                              String name) {
         this.skillId = skillId;
         this.features = features;
         this.tip = tip;
@@ -62,7 +72,7 @@ public class CrewSkillDataModel {
         return effect;
     }
 
-    public Images getImages() {
+    public CrewSkillImage getImages() {
         return images;
     }
 
@@ -72,24 +82,6 @@ public class CrewSkillDataModel {
 
     public String getName() {
         return name;
-    }
-
-    public static class Images {
-
-        @SerializedName("large")
-        @Expose
-        private String large;
-
-        public Images(String large) {
-            this.large = large;
-        }
-
-        public Images() {
-        }
-
-        public String getLarge() {
-            return large;
-        }
     }
 
 }

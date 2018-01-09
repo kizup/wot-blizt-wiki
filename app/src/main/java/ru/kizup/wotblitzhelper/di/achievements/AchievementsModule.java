@@ -5,6 +5,7 @@ import dagger.Provides;
 import ru.kizup.wotblitzhelper.business.achievements.AchievementsInteractor;
 import ru.kizup.wotblitzhelper.business.achievements.IAchievementsInteractor;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
+import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
 import ru.kizup.wotblitzhelper.data.repositories.achievements.AchievementsRepository;
 import ru.kizup.wotblitzhelper.data.repositories.achievements.IAchievementsRepository;
@@ -31,8 +32,8 @@ public class AchievementsModule {
 
     @Provides
     @AchievementsScope
-    IAchievementsRepository provideAchievementsRepository(IApiService service) {
-        return new AchievementsRepository(service);
+    IAchievementsRepository provideAchievementsRepository(IApiService service, IDatabaseHelper helper) {
+        return new AchievementsRepository(service, helper);
     }
 
     @Provides

@@ -36,4 +36,9 @@ public class MainPresenter implements IMainPresenter {
     public void clickOnCrewSkills() {
         mView.showCrewSkillsScreen();
     }
+
+    @Override
+    public void clickOnVehicles() {
+        mView.showVehiclesScreen();
+    }
 }

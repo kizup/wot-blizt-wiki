@@ -17,4 +17,6 @@ public interface IMainPresenter extends BasePresenter<IMainView> {
 
     void clickOnCrewSkills();
 
+    void clickOnVehicles();
+
 }

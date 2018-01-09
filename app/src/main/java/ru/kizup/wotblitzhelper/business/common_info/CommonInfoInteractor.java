@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Single;
-import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
-import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.data.repositories.common_info.ICommonInfoRepository;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoUIModel;
@@ -46,7 +44,7 @@ public class CommonInfoInteractor implements ICommonInfoInteractor {
                 updatedAtDate,
                 model.getLanguages().size(),
                 model.getVehicleTypes().size(),
-                model.getAchievments().size());
+                model.getAchievements().size());
     }
 
     private List<VehicleTypeUIModel> getVehicleTypes(HashMap<String, String> types) {

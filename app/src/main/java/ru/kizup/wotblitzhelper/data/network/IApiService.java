@@ -3,12 +3,15 @@ package ru.kizup.wotblitzhelper.data.network;
 import java.util.HashMap;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
+import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 
 /**
  * Created by: dpuzikov on 28.12.17.
@@ -19,7 +22,7 @@ import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
 public interface IApiService {
 
     @GET("achievements/")
-    Observable<BaseResponse<HashMap<String, AchievementsModel>>> getAchievements(@Query("fields") String fields);
+    Single<BaseResponse<HashMap<String, AchievementsModel>>> getAchievements(@Query("fields") String fields);
 
     @GET("info/")
     Observable<BaseResponse<CommonInfoDataModel>> getCommonInfo();
@@ -29,5 +32,11 @@ public interface IApiService {
 
     @GET("crewskills/")
     Observable<BaseResponse<HashMap<String, CrewSkillDataModel>>> getAllCrewSkills();
+
+    @GET("vehicles/")
+    Observable<BaseResponse<HashMap<String, ShortVehicleInfoDataModel>>> getShortAllVehicleInfo(@Query("fields") String fields);
+
+    @GET("vehicles/")
+    Observable<BaseResponse<HashMap<String, DetailVehicleDataModel>>> getDetailVehicleInfo(@Query("tank_id") int id);
 
 }

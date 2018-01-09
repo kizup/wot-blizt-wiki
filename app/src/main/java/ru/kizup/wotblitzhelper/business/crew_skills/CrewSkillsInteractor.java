@@ -29,10 +29,15 @@ public class CrewSkillsInteractor
 
     @Override
     public Single<Map<CrewSkillSectionUIModel, List<CrewSkillUIModel>>> getCrewSkills() {
-        return Single.zip(getCrewSkillsFromData(), mCrewSkillsRepository.getAllVehicleTypes(), this::convert);
+        return Single.zip(
+                getCrewSkillsFromData(),
+                mCrewSkillsRepository.getAllVehicleTypes(),
+                this::convert
+        );
     }
 
-    private Map<CrewSkillSectionUIModel, List<CrewSkillUIModel>> convert(List<CrewSkillDataModel> skillsList, Map<String, String> vehicleTypes) {
+    private Map<CrewSkillSectionUIModel, List<CrewSkillUIModel>> convert(List<CrewSkillDataModel> skillsList,
+                                                                         Map<String, String> vehicleTypes) {
         Map<CrewSkillSectionUIModel, List<CrewSkillUIModel>> map = new HashMap<>();
 
         List<CrewSkillSectionUIModel> sections = new ArrayList<>();

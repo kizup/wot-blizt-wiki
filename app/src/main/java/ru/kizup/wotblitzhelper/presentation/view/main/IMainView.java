@@ -16,4 +16,6 @@ public interface IMainView extends BaseView {
 
     void showCrewSkillsScreen();
 
+    void showVehiclesScreen();
+
 }

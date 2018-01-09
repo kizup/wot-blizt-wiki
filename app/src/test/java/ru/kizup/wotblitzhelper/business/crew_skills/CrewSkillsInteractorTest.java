@@ -12,6 +12,7 @@ import io.reactivex.observers.TestObserver;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.repositories.crew_skills.ICrewSkillsRepository;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillImage;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillSectionUIModel;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillUIModel;
 
@@ -41,7 +42,7 @@ public class CrewSkillsInteractorTest {
         when(mCrewSkillsRepository.getAllCrewSkills())
                 .thenReturn(Single.fromCallable(() -> {
                     HashMap<String, CrewSkillDataModel> models = new HashMap<>();
-                    CrewSkillDataModel.Images images = new CrewSkillDataModel.Images("imgurl");
+                    CrewSkillImage images = new CrewSkillImage("imgurl");
                     models.put("First", new CrewSkillDataModel("1", "Feature", "Tip", "Effect", images, "medium", "Skill"));
                     return models;
                 }));

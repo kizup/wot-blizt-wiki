@@ -3,6 +3,7 @@ package ru.kizup.wotblitzhelper.data.repositories.crew_skills;
 import java.util.HashMap;
 
 import io.reactivex.Single;
+import ru.kizup.wotblitzhelper.data.repositories.IRepository;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
 
 /**
@@ -11,10 +12,8 @@ import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
  * Skype: kizupx
  */
 
-public interface ICrewSkillsRepository {
+public interface ICrewSkillsRepository extends IRepository {
 
     Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkills();
-
-    Single<HashMap<String, String>> getAllVehicleTypes();
 
 }

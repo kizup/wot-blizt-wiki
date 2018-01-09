@@ -1,0 +1,65 @@
+{
+  "status": "ok",
+  "meta": {},
+  "data": {
+    "achievement_sections": {
+      "platoon": {
+        "name": "Взводные награды",
+        "order": 5
+      },
+      "title": {
+        "name": "Почётные звания",
+        "order": 1
+      },
+      "commemorative": {
+        "name": "Памятные знаки",
+        "order": 3
+      },
+      "step": {
+        "name": "Этапные награды",
+        "order": 4
+      },
+      "battle": {
+        "name": "«Герой Битвы»",
+        "order": 0
+      },
+      "epic": {
+        "name": "Эпические медали",
+        "order": 2
+      }
+    },
+    "tanks_updated_at": 1513779369,
+    "languages": {
+      "ru": "Русский",
+      "fr": "Français",
+      "en": "English",
+      "zh-tw": "繁體中文",
+      "de": "Deutsch",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "zh-cn": "简体中文",
+      "es": "Español",
+      "th": "ไทย",
+      "vi": "Tiếng Việt",
+      "cs": "Čeština",
+      "pl": "Polski"
+    },
+    "vehicle_types": {
+      "heavyTank": "Тяжёлый танк",
+      "AT-SPG": "ПТ-САУ",
+      "mediumTank": "Средний танк",
+      "lightTank": "Легкий танк"
+    },
+    "vehicle_nations": {
+      "usa": "США",
+      "france": "Франция",
+      "ussr": "СССР",
+      "china": "Китай",
+      "uk": "Великобритания",
+      "japan": "Япония",
+      "germany": "Германия",
+      "other": "Сборная нация"
+    },
+    "game_version": "4.5.0.1"
+  }
+}

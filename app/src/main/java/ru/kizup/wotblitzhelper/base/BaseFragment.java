@@ -5,11 +5,14 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import ru.kizup.wotblitzhelper.R;
 
 /**
  * Created by: dpuzikov on 19.12.17.
@@ -64,6 +67,13 @@ public abstract class BaseFragment extends Fragment
 
     protected void setToolbar(Toolbar toolbar) {
         getBaseActivity().setSupportActionBar(toolbar);
+    }
+
+    protected void showFragment(Fragment fragment) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.addToBackStack(null);
+        transaction.replace(R.id.fl_container, fragment);
+        transaction.commit();
     }
 
 }
