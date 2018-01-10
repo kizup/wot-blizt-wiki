@@ -13,27 +13,60 @@ import io.realm.RealmObject;
 
 public class ArmorDataModel extends RealmObject {
 
-    @SerializedName("turret")
+    public static final int HULL_ARMOR = 0;
+    public static final int TURRET_ARMOR = 1;
+
+    public static final String HULL = "hull";
+    public static final String TURRET = "turret";
+
+    @SerializedName("front")
     @Expose
-    private TurretDataModel turret;
-    @SerializedName("hull")
+    private int front;
+    @SerializedName("sides")
     @Expose
-    private HullDataModel hull;
+    private int sides;
+    @SerializedName("rear")
+    @Expose
+    private int rear;
 
-    public TurretDataModel getTurret() {
-        return turret;
+    // Бронирование (корпуса либо башни)
+    private int type;
+
+    public ArmorDataModel() {
     }
 
-    public void setTurret(TurretDataModel turret) {
-        this.turret = turret;
+    public ArmorDataModel(int front, int sides, int rear, int type) {
+        this.front = front;
+        this.sides = sides;
+        this.rear = rear;
+        this.type = type;
     }
 
-    public HullDataModel getHull() {
-        return hull;
+    public void setType(int type) {
+        this.type = type;
     }
 
-    public void setHull(HullDataModel hull) {
-        this.hull = hull;
+    public static int getHullArmor() {
+        return HULL_ARMOR;
     }
 
+    public static int getTurretArmor() {
+        return TURRET_ARMOR;
+    }
+
+    public int getFront() {
+        return front;
+    }
+
+    public int getSides() {
+        return sides;
+    }
+
+    public int getRear() {
+        return rear;
+    }
+
+    public int getType() {
+        return type;
+    }
 }

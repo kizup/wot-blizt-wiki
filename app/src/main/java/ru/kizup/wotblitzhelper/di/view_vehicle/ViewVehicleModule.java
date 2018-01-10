@@ -2,6 +2,7 @@ package ru.kizup.wotblitzhelper.di.view_vehicle;
 
 import dagger.Module;
 import dagger.Provides;
+import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
 import ru.kizup.wotblitzhelper.business.view_vehicle.IViewVehicleInteractor;
 import ru.kizup.wotblitzhelper.business.view_vehicle.ViewVehicleInteractor;
 import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
@@ -24,8 +25,10 @@ public class ViewVehicleModule {
 
     @Provides
     @ViewVehicleScope
-    IViewVehiclePresenter provideViewVehiclePresenter(RxSchedulersAbs rxSchedulersAbs, IViewVehicleInteractor interactor) {
-        return new ViewVehiclePresenter(rxSchedulersAbs, interactor);
+    IViewVehiclePresenter provideViewVehiclePresenter(RxSchedulersAbs rxSchedulersAbs,
+                                                      IViewVehicleInteractor interactor,
+                                                      ResponseValidator validator) {
+        return new ViewVehiclePresenter(rxSchedulersAbs, interactor, validator);
     }
 
     @Provides

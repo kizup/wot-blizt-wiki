@@ -86,7 +86,6 @@ public class VehiclesAdapter extends SectionedRecyclerViewAdapter<SectionedViewH
 
     @Override
     public void onBindFooterViewHolder(SectionedViewHolder holder, int section) {
-
     }
 
     @Override

@@ -9,6 +9,9 @@ import java.util.TreeMap;
 
 import io.reactivex.Observable;
 import io.reactivex.Single;
+import retrofit2.Response;
+import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.repositories.vehicles.IVehiclesRepository;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleNationUIModel;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleTypeUIModel;
@@ -34,9 +37,28 @@ public class VehiclesInteractor implements IVehiclesInteractor {
 
     @Override
     public Single<List<ShortVehicleInfoUIModel>> getAllVehicles() {
-        return mVehiclesRepository.getAllVehicles()
+        return mVehiclesRepository.getAllVehiclesFromDatabase()
+                .flatMap(vehicles -> {
+                    if (vehicles.isEmpty()) return getVehiclesFromServerAndCache();
+                    return Single.just(vehicles);
+                })
                 .flatMapObservable(Observable::fromIterable)
                 .map(this::mapToUIModel)
+                .toList();
+    }
+
+    private Single<List<ShortVehicleInfoDataModel>> getVehiclesFromServerAndCache() {
+        return mVehiclesRepository.getAllVehiclesFromServer()
+                .map(Response::body)
+                .map(response -> {
+                    if (!response.isSuccess()) {
+                        throw new FailureResponseException(response.getError());
+                    }
+                    return response;
+                })
+                .map(BaseResponse::getData)
+                .flatMapObservable(vehiclesMap -> Observable.fromIterable(vehiclesMap.values()))
+                .doOnNext(shortDataModel -> mVehiclesRepository.saveModel(shortDataModel).subscribe())
                 .toList();
     }
 
@@ -49,7 +71,11 @@ public class VehiclesInteractor implements IVehiclesInteractor {
 
     private Single<HashMap<ShortVehicleSection, List<ShortVehicleInfoUIModel>>> getVehiclesFromRepository() {
         HashMap<ShortVehicleSection, List<ShortVehicleInfoUIModel>> models = new HashMap<>();
-        return mVehiclesRepository.getAllVehicles()
+        return mVehiclesRepository.getAllVehiclesFromDatabase()
+                .flatMap(vehicles -> {
+                    if (vehicles.isEmpty()) return getVehiclesFromServerAndCache();
+                    return Single.just(vehicles);
+                })
                 .flatMapObservable(Observable::fromIterable)
                 .doOnNext(dataModel -> {
                     ShortVehicleSection key = getSection(dataModel);
@@ -88,8 +114,8 @@ public class VehiclesInteractor implements IVehiclesInteractor {
         String cost = dataModel.getCost() == null
                 ? String.valueOf(0)
                 : (dataModel.getCost().getPriceCredit() != null
-                    ? String.valueOf(dataModel.getCost().getPriceCredit())
-                    : String.valueOf(dataModel.getCost().getPriceGold()));
+                ? String.valueOf(dataModel.getCost().getPriceCredit())
+                : String.valueOf(dataModel.getCost().getPriceGold()));
         boolean isPremium = dataModel.getCost() != null && dataModel.getCost().getPriceGold() != null;
         return new ShortVehicleInfoUIModel(
                 dataModel.getTankId(),

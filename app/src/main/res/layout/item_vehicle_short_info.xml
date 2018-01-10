@@ -7,18 +7,9 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <ImageView
-        android:id="@+id/iv_vehicle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center" />
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_vehicle_tier"
             android:layout_width="wrap_content"
@@ -27,6 +18,18 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             tools:text="X" />
+        <ImageView
+            android:id="@+id/iv_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_vehicle_name"
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             android:gravity="start|center_vertical"
             android:padding="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             tools:text="IS - 2" />
     </LinearLayout>
 

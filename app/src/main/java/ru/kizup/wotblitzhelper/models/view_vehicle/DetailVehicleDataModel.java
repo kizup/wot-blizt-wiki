@@ -3,8 +3,9 @@ package ru.kizup.wotblitzhelper.models.view_vehicle;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+import java.util.HashMap;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
@@ -29,24 +30,25 @@ public class DetailVehicleDataModel extends RealmObject {
     private Integer tankId;
     @SerializedName("suspensions")
     @Expose
-    @Ignore
-    private List<Integer> suspensions = null;
+    private RealmList<Integer> suspensions = new RealmList<>();
     @SerializedName("description")
     @Expose
     private String description;
     @SerializedName("engines")
     @Expose
+    private RealmList<Integer> engines = new RealmList<>();
+    @SerializedName("prices_xp")
+    @Expose
     @Ignore
-    private List<Integer> engines = null;
-//    @SerializedName("prices_xp")
-//    @Expose
-//    private PricesXp pricesXp;
-//    @SerializedName("next_tanks")
-//    @Expose
-//    private NextTanks nextTanks;
-//    @SerializedName("modules_tree")
-//    @Expose
-//    private ModulesTree modulesTree;
+    private HashMap<String, Integer> pricesXp;
+    @SerializedName("next_tanks")
+    @Expose
+    @Ignore
+    private HashMap<String, Integer> nextTanks;
+    @SerializedName("modules_tree")
+    @Expose
+    @Ignore
+    private HashMap<String, ModuleDataModel> modules;
     @SerializedName("nation")
     @Expose
     private String nation;
@@ -59,9 +61,9 @@ public class DetailVehicleDataModel extends RealmObject {
     @SerializedName("cost")
     @Expose
     private Cost cost;
-//    @SerializedName("default_profile")
-//    @Expose
-//    private DefaultProfile defaultProfile;
+    @SerializedName("default_profile")
+    @Expose
+    private ProfileDataModel defaultProfile;
     @SerializedName("tier")
     @Expose
     private Integer tier;
@@ -70,150 +72,129 @@ public class DetailVehicleDataModel extends RealmObject {
     private String type;
     @SerializedName("guns")
     @Expose
-    @Ignore
-    private List<Integer> guns = null;
+    private RealmList<Integer> guns = new RealmList<>();
     @SerializedName("turrets")
     @Expose
-    @Ignore
-    private List<Integer> turrets = null;
+    private RealmList<Integer> turrets = new RealmList<>();
     @SerializedName("name")
     @Expose
     private String name;
 
-    public List<Integer> getSuspensions() {
-        return suspensions;
+    // Data for realm, because it don't work with Maps
+    private RealmList<PriceXp> prices = new RealmList<>();
+    private RealmList<NextTank> nextTanksList = new RealmList<>();
+    private RealmList<ModuleDataModel> modulesList = new RealmList<>();
+
+    public void setPrices(RealmList<PriceXp> prices) {
+        this.prices = prices;
     }
 
-    public void setSuspensions(List<Integer> suspensions) {
-        this.suspensions = suspensions;
+    public RealmList<ModuleDataModel> getModulesList() {
+        return modulesList;
     }
 
-    public String getDescription() {
-        return description;
+    public void setModulesList(RealmList<ModuleDataModel> modulesList) {
+        this.modulesList = modulesList;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public RealmList<NextTank> getNextTanksList() {
+        return nextTanksList;
     }
 
-    public List<Integer> getEngines() {
-        return engines;
-    }
-
-    public void setEngines(List<Integer> engines) {
-        this.engines = engines;
-    }
-
-//    public PricesXp getPricesXp() {
-//        return pricesXp;
-//    }
-//
-//    public void setPricesXp(PricesXp pricesXp) {
-//        this.pricesXp = pricesXp;
-//    }
-//
-//    public NextTanks getNextTanks() {
-//        return nextTanks;
-//    }
-//
-//    public void setNextTanks(NextTanks nextTanks) {
-//        this.nextTanks = nextTanks;
-//    }
-
-//    public ModulesTree getModulesTree() {
-//        return modulesTree;
-//    }
-//
-//    public void setModulesTree(ModulesTree modulesTree) {
-//        this.modulesTree = modulesTree;
-//    }
-
-    public String getNation() {
-        return nation;
-    }
-
-    public void setNation(String nation) {
-        this.nation = nation;
-    }
-
-    public Boolean getIsPremium() {
-        return isPremium;
-    }
-
-    public void setIsPremium(Boolean isPremium) {
-        this.isPremium = isPremium;
-    }
-
-    public Images getImages() {
-        return images;
-    }
-
-    public void setImages(Images images) {
-        this.images = images;
-    }
-
-    public Cost getCost() {
-        return cost;
-    }
-
-    public void setCost(Cost cost) {
-        this.cost = cost;
-    }
-
-//    public DefaultProfile getDefaultProfile() {
-//        return defaultProfile;
-//    }
-//
-//    public void setDefaultProfile(DefaultProfile defaultProfile) {
-//        this.defaultProfile = defaultProfile;
-//    }
-
-    public Integer getTier() {
-        return tier;
-    }
-
-    public void setTier(Integer tier) {
-        this.tier = tier;
+    public void setNextTanksList(RealmList<NextTank> nextTanksList) {
+        this.nextTanksList = nextTanksList;
     }
 
     public Integer getTankId() {
         return tankId;
     }
 
-    public void setTankId(Integer tankId) {
-        this.tankId = tankId;
+    public RealmList<Integer> getSuspensions() {
+        return suspensions;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public RealmList<Integer> getEngines() {
+        return engines;
+    }
+
+    public HashMap<String, Integer> getPricesXp() {
+        return pricesXp;
+    }
+
+    public HashMap<String, Integer> getNextTanks() {
+        return nextTanks;
+    }
+
+    public HashMap<String, ModuleDataModel> getModules() {
+        return modules;
+    }
+
+    public String getNation() {
+        return nation;
+    }
+
+    public Boolean getPremium() {
+        return isPremium;
+    }
+
+    public Images getImages() {
+        return images;
+    }
+
+    public Cost getCost() {
+        return cost;
+    }
+
+    public Integer getTier() {
+        return tier;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public List<Integer> getGuns() {
+    public RealmList<Integer> getGuns() {
         return guns;
     }
 
-    public void setGuns(List<Integer> guns) {
-        this.guns = guns;
-    }
-
-    public List<Integer> getTurrets() {
+    public RealmList<Integer> getTurrets() {
         return turrets;
     }
 
-    public void setTurrets(List<Integer> turrets) {
-        this.turrets = turrets;
+    public Integer[] getTurretsArray() {
+        Integer[] turretsArray = new Integer[turrets.size()];
+        return turrets.toArray(turretsArray);
+    }
+
+    public Integer[] getGunsArray() {
+        Integer[] gunsArray = new Integer[guns.size()];
+        return guns.toArray(gunsArray);
+    }
+
+    public Integer[] getSuspensionsArray() {
+        Integer[] suspensionsArray = new Integer[suspensions.size()];
+        return suspensions.toArray(suspensionsArray);
+    }
+
+    public Integer[] getEnginesArray() {
+        Integer[] enginesArray = new Integer[engines.size()];
+        return engines.toArray(enginesArray);
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public RealmList<PriceXp> getPrices() {
+        return prices;
+    }
+
+    public ProfileDataModel getDefaultProfile() {
+        return defaultProfile;
     }
 
 }

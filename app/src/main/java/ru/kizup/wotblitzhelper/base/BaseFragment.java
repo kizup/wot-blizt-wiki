@@ -72,6 +72,7 @@ public abstract class BaseFragment extends Fragment
     protected void showFragment(Fragment fragment) {
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.addToBackStack(null);
+        transaction.setTransition(FragmentTransaction.TRANSIT_ENTER_MASK);
         transaction.replace(R.id.fl_container, fragment);
         transaction.commit();
     }
