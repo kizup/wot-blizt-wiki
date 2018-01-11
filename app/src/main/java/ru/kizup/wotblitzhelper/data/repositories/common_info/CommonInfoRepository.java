@@ -1,11 +1,10 @@
 package ru.kizup.wotblitzhelper.data.repositories.common_info;
 
 import io.reactivex.Single;
+import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
-import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
-import ru.kizup.wotblitzhelper.data.repositories.Repository;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 
 /**
@@ -26,13 +25,13 @@ public class CommonInfoRepository
     @Override
     public Single<CommonInfoDataModel> getCommonInfo() {
         return mApiService.getCommonInfo()
-                .flatMapSingle(response -> {
+                .map(Response::body)
+                .flatMap(response -> {
                     if (!response.isSuccess()) {
                         return Single.error(new FailureResponseException(response.getError()));
                     }
-                    return Single.fromCallable(() -> response);
+                    return Single.just(response);
                 })
-                .map(BaseResponse::getData)
-                .singleOrError();
+                .map(BaseResponse::getData);
     }
 }

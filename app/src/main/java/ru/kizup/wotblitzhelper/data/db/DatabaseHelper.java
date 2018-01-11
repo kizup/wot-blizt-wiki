@@ -2,6 +2,7 @@ package ru.kizup.wotblitzhelper.data.db;
 
 import android.content.Context;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +15,7 @@ import io.realm.RealmResults;
 import io.realm.exceptions.RealmException;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.AchievementDao;
+import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleNationDao;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleTypeDao;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
@@ -295,6 +297,29 @@ public class DatabaseHelper implements IDatabaseHelper {
             }
             close();
             return suspensions;
+        });
+    }
+
+    @Override
+    public Single<CommonInfoDataModel> getCommonWikiInfo() {
+        return Single.fromCallable(() -> {
+            Realm realm = getRealm();
+            RealmQuery<CommonInfoDataModel> query = realm.where(CommonInfoDataModel.class);
+
+            if (query == null) {
+                close();
+                throw new EntityNotFoundException();
+            }
+            CommonInfoDataModel model = query.findFirst();
+
+            if (model == null) {
+                close();
+                throw new EntityNotFoundException();
+            }
+
+            model = realm.copyFromRealm(model);
+            close();
+            return model;
         });
     }
 

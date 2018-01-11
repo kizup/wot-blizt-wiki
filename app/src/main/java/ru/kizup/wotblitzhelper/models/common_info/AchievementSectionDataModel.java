@@ -2,13 +2,15 @@ package ru.kizup.wotblitzhelper.models.common_info;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
  * Created by: dpuzikov on 27.12.17.
  * e-mail: kizup.diman@gmail.com
  * Skype: kizupx
  */
 
-public class AchievementInfoDataModel {
+public class AchievementSectionDataModel extends RealmObject {
 
     @SerializedName("name")
     private String name;
@@ -16,10 +18,10 @@ public class AchievementInfoDataModel {
     private int order;
     private String code;
 
-    public AchievementInfoDataModel() {
+    public AchievementSectionDataModel() {
     }
 
-    public AchievementInfoDataModel(String name, int order, String code) {
+    public AchievementSectionDataModel(String name, int order, String code) {
         this.name = name;
         this.order = order;
         this.code = code;
@@ -43,9 +45,5 @@ public class AchievementInfoDataModel {
 
     public int getOrder() {
         return order;
-    }
-
-    public void setOrder(int order) {
-        this.order = order;
     }
 }

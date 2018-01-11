@@ -44,7 +44,7 @@ public class CommonInfoInteractor implements ICommonInfoInteractor {
                 updatedAtDate,
                 model.getLanguages().size(),
                 model.getVehicleTypes().size(),
-                model.getAchievements().size());
+                model.getAchievementSections().size());
     }
 
     private List<VehicleTypeUIModel> getVehicleTypes(HashMap<String, String> types) {

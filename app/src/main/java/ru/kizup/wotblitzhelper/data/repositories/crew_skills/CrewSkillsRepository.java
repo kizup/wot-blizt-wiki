@@ -3,6 +3,7 @@ package ru.kizup.wotblitzhelper.data.repositories.crew_skills;
 import java.util.HashMap;
 
 import io.reactivex.Single;
+import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
@@ -34,15 +35,15 @@ public class CrewSkillsRepository extends Repository
 
     private Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkillsFromServer() {
         return getApiService().getAllCrewSkills()
-                .flatMapSingle(response -> {
+                .map(Response::body)
+                .flatMap(response -> {
                     if (!response.isSuccess()) {
                         return Single.error(new FailureResponseException(response.getError()));
                     }
                     return Single.fromCallable(() -> response);
                 })
                 .map(BaseResponse::getData)
-                .doOnNext(this::saveCrewSkills)
-                .singleOrError();
+                .doOnSuccess(this::saveCrewSkills);
     }
 
     private void saveCrewSkills(HashMap<String, CrewSkillDataModel> crewSkills) {

@@ -14,4 +14,6 @@
 
     <string name="percent_mask">%s %%</string>
     <string name="armor_mask">%d mm</string>
+    <string name="error_internet_is_unavailable">Internet is unavailable</string>
+    <string name="database_successfully_update">Database is update</string>
 </resources>

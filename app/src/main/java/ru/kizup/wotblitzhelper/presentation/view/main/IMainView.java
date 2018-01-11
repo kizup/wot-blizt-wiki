@@ -18,4 +18,9 @@ public interface IMainView extends BaseView {
 
     void showVehiclesScreen();
 
+    void showRequestUpdateDatabaseDialog();
+
+    void showUpdateDialog();
+
+    void hideUpdateDialog();
 }

@@ -1,14 +1,8 @@
 package ru.kizup.wotblitzhelper.data.repositories.achievements;
 
-import android.util.Log;
-
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 
-import io.reactivex.Observable;
 import io.reactivex.Single;
-import io.reactivex.functions.BiFunction;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
@@ -16,7 +10,6 @@ import ru.kizup.wotblitzhelper.data.network.IApiService;
 import ru.kizup.wotblitzhelper.data.repositories.Repository;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.AchievementDao;
-import ru.kizup.wotblitzhelper.models.common_info.AchievementInfoDataModel;
 
 /**
  * Created by: dpuzikov on 27.12.17.

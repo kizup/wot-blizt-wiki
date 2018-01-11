@@ -85,7 +85,7 @@ public class VehiclesInteractor implements IVehiclesInteractor {
 
                     models.get(key).add(mapToUIModel(dataModel));
                 })
-                .toList()
+                .toSortedList((o1, o2) -> o1.getTier().compareTo(o2.getTier()))
                 .map(list -> models);
     }
 

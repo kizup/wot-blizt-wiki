@@ -5,11 +5,13 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.Single;
+import io.reactivex.SingleTransformer;
+import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
-import ru.kizup.wotblitzhelper.models.common_info.AchievementInfoDataModel;
+import ru.kizup.wotblitzhelper.models.common_info.AchievementSectionDataModel;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleNationDao;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleTypeDao;
@@ -57,48 +59,39 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public Single<List<AchievementInfoDataModel>> getAllAchievementSections() {
+    public Single<List<AchievementSectionDataModel>> getAllAchievementSections() {
         return mApiService.getCommonInfo("vehicle_nations")
-                .flatMapSingle(response -> {
-                    if (!response.isSuccess()) {
-                        return Single.error(new FailureResponseException(response.getError()));
-                    }
-                    return Single.fromCallable(() -> response);
-                })
-                .map(BaseResponse::getData)
-                .map(CommonInfoDataModel::getAchievements)
-                .flatMap(map -> Observable.fromIterable(map.keySet())
-                        .doOnNext(key -> map.get(key).setCode(key))
+                .compose(responseTransformer())
+                .map(CommonInfoDataModel::getAchievementSections)
+                .flatMapObservable(map -> Observable.fromIterable(map.keySet())
+                        .doOnNext(s -> map.get(s).setCode(s))
                         .map(map::get))
                 .toList();
     }
 
     private Single<HashMap<String, String>> getAllVehicleNationsFromServer() {
         return mApiService.getCommonInfo("vehicle_nations")
-                .flatMapSingle(response -> {
+                .compose(responseTransformer())
+                .map(CommonInfoDataModel::getVehicleNations)
+                .doOnSuccess(this::saveVehicleNations);
+    }
+
+    private <D> SingleTransformer<Response<BaseResponse<D>>, D> responseTransformer() {
+        return upstream -> upstream.map(Response::body)
+                .flatMap(response -> {
                     if (!response.isSuccess()) {
                         return Single.error(new FailureResponseException(response.getError()));
                     }
                     return Single.fromCallable(() -> response);
                 })
-                .map(BaseResponse::getData)
-                .map(CommonInfoDataModel::getVehicleNations)
-                .doOnNext(this::saveVehicleNations)
-                .singleOrError();
+                .map(BaseResponse::getData);
     }
 
     private Single<HashMap<String, String>> getAllVehicleTypesFromServer() {
         return mApiService.getCommonInfo("vehicle_types")
-                .flatMapSingle(response -> {
-                    if (!response.isSuccess()) {
-                        return Single.error(new FailureResponseException(response.getError()));
-                    }
-                    return Single.fromCallable(() -> response);
-                })
-                .map(BaseResponse::getData)
+                .compose(responseTransformer())
                 .map(CommonInfoDataModel::getVehicleTypes)
-                .doOnNext(this::saveVehicleTypes)
-                .singleOrError();
+                .doOnSuccess(this::saveVehicleTypes);
     }
 
     private void saveVehicleTypes(HashMap<String, String> types) {

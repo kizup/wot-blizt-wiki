@@ -26,14 +26,17 @@ public interface IApiService {
     @GET("achievements/")
     Single<BaseResponse<HashMap<String, AchievementsModel>>> getAchievements(@Query("fields") String fields);
 
-    @GET("info/")
-    Observable<BaseResponse<CommonInfoDataModel>> getCommonInfo();
+    @GET("achievements/")
+    Single<Response<BaseResponse<HashMap<String, AchievementsModel>>>> getAllAchievements();
 
     @GET("info/")
-    Observable<BaseResponse<CommonInfoDataModel>> getCommonInfo(@Query("fields") String fields);
+    Single<Response<BaseResponse<CommonInfoDataModel>>> getCommonInfo();
+
+    @GET("info/")
+    Single<Response<BaseResponse<CommonInfoDataModel>>> getCommonInfo(@Query("fields") String fields);
 
     @GET("crewskills/")
-    Observable<BaseResponse<HashMap<String, CrewSkillDataModel>>> getAllCrewSkills();
+    Single<Response<BaseResponse<HashMap<String, CrewSkillDataModel>>>> getAllCrewSkills();
 
     @GET("vehicles/")
     Observable<Response<BaseResponse<HashMap<String, ShortVehicleInfoDataModel>>>> getShortAllVehicleInfo(@Query("fields") String fields);
@@ -41,7 +44,13 @@ public interface IApiService {
     @GET("vehicles/")
     Observable<BaseResponse<HashMap<String, DetailVehicleDataModel>>> getDetailVehicleInfo(@Query("tank_id") int id);
 
+    @GET("vehicles/")
+    Observable<Response<BaseResponse<HashMap<String, DetailVehicleDataModel>>>> getAllDetailVehicleInfo();
+
     @GET("modules/")
     Observable<Response<BaseResponse<ModulesDataModel>>> getModulesList(@Query("module_id") String moduleIds, @Query("type") String moduleType);
+
+    @GET("modules/")
+    Observable<Response<BaseResponse<ModulesDataModel>>> getModulesList();
 
 }

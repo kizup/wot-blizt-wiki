@@ -19,4 +19,6 @@ public interface IMainPresenter extends BasePresenter<IMainView> {
 
     void clickOnVehicles();
 
+    void updateDatabase();
+
 }

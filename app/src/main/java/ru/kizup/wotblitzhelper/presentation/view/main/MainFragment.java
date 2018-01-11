@@ -1,9 +1,11 @@
 package ru.kizup.wotblitzhelper.presentation.view.main;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +38,7 @@ public class MainFragment extends BaseFragment
     IMainPresenter mMainPresenter;
 
     private Unbinder mUnbinder;
+    private ProgressDialog mProgressDialog;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -95,6 +98,29 @@ public class MainFragment extends BaseFragment
     @Override
     public void showVehiclesScreen() {
         showFragment(VehiclesFragment.newInstance());
+    }
+
+    @Override
+    public void showRequestUpdateDatabaseDialog() {
+        new AlertDialog.Builder(getContext())
+                .setTitle("Database is out of date")
+                .setMessage("Do you want update database?")
+                .setCancelable(false)
+                .setPositiveButton(android.R.string.ok, (dialog, which) -> mMainPresenter.updateDatabase())
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+    }
+
+    @Override
+    public void showUpdateDialog() {
+        mProgressDialog = new ProgressDialog(getContext());
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.show();
+    }
+
+    @Override
+    public void hideUpdateDialog() {
+        if (mProgressDialog != null) mProgressDialog.dismiss();
     }
 
     @Override

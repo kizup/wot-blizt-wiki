@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import io.reactivex.Single;
-import ru.kizup.wotblitzhelper.models.common_info.AchievementInfoDataModel;
+import ru.kizup.wotblitzhelper.models.common_info.AchievementSectionDataModel;
 
 /**
  * Created by: dpuzikov on 29.12.17.
@@ -18,6 +18,6 @@ public interface IRepository {
 
     Single<HashMap<String, String>> getAllVehicleNations();
 
-    Single<List<AchievementInfoDataModel>> getAllAchievementSections();
+    Single<List<AchievementSectionDataModel>> getAllAchievementSections();
 
 }
