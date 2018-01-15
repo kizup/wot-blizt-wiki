@@ -1,6 +1,7 @@
 package ru.kizup.wotblitzhelper.data.repositories.main;
 
 import java.util.HashMap;
+import java.util.List;
 
 import io.reactivex.Single;
 import io.realm.RealmObject;
@@ -12,6 +13,7 @@ import ru.kizup.wotblitzhelper.data.repositories.Repository;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.vehicles.Images;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.ModulesDataModel;
@@ -36,7 +38,7 @@ public class MainRepository extends Repository
 
     @Override
     public Single<Response<BaseResponse<HashMap<String, ShortVehicleInfoDataModel>>>> getAllVehiclesFromServer() {
-        return getApiService().getShortAllVehicleInfo("tank_id,description,name,nation,tier,type,cost,images")
+        return getApiService().getShortAllVehicleInfo("tank_id,description,name,nation,tier,type,cost,images,is_premium")
                 .singleOrError();
     }
 
@@ -75,5 +77,10 @@ public class MainRepository extends Repository
     @Override
     public Single<Response<BaseResponse<CommonInfoDataModel>>> getGameVersionFromServer() {
         return getApiService().getCommonInfo("game_version");
+    }
+
+    @Override
+    public Single<List<Images>> getAllImagesFromDatabase() {
+        return getDatabaseHelper().getAllImages();
     }
 }

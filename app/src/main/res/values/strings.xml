@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WoT Blitz Helper</string>
+    <string name="app_name">WoT Blitz Wiki</string>
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="vehicle_types_mask">Типов техники: %d</string>
     <string name="game_version">Game version</string>
@@ -16,4 +16,5 @@
     <string name="armor_mask">%d mm</string>
     <string name="error_internet_is_unavailable">Internet is unavailable</string>
     <string name="database_successfully_update">Database is update</string>
+    <string name="error_entity_not_found">Данные не найдены в базе</string>
 </resources>

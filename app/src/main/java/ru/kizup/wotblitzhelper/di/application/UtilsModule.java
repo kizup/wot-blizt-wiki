@@ -6,6 +6,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import ru.kizup.wotblitzhelper.business.VehiclesMapper;
 import ru.kizup.wotblitzhelper.business.validator.ResponseValidator;
 import ru.kizup.wotblitzhelper.data.db.DatabaseHelper;
 import ru.kizup.wotblitzhelper.data.db.IDatabaseHelper;
@@ -45,6 +46,12 @@ public class UtilsModule {
     @Singleton
     ResponseValidator provideResponseValidator(Context context) {
         return new ResponseValidator(context);
+    }
+
+    @Provides
+    @Singleton
+    VehiclesMapper provideVehiclesMapper() {
+        return new VehiclesMapper();
     }
 
 }

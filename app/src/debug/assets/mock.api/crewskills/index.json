@@ -1,0 +1,206 @@
+{
+  "status": "ok",
+  "meta": {
+    "count": 18
+  },
+  "data": {
+    "smooth_driving": {
+      "skill_id": "smooth_driving",
+      "features": null,
+      "tip": "Наиболее эффективен для техники, которая ведёт огонь на ходу.",
+      "effect": "Уменьшает на 20% разброс орудия при стрельбе на ходу.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/smooth_driving.png"
+      },
+      "vehicle_type": "mediumTank",
+      "name": "Плавный ход"
+    },
+    "repair": {
+      "skill_id": "repair",
+      "features": null,
+      "tip": null,
+      "effect": "Сокращает на 80% время ремонта любого модуля, получившего критические повреждения.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/repair.png"
+      },
+      "vehicle_type": "heavyTank",
+      "name": "Ремонт"
+    },
+    "smooth_turn": {
+      "skill_id": "smooth_turn",
+      "features": null,
+      "tip": null,
+      "effect": "Уменьшает на 20% разброс орудия при развороте техники.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/smooth_turn.png"
+      },
+      "vehicle_type": "AT-SPG",
+      "name": "Плавный разворот"
+    },
+    "deadly_accuracy": {
+      "skill_id": "deadly_accuracy",
+      "features": null,
+      "tip": null,
+      "effect": "Увеличивает на 20% обзор и скорость сведения орудия, если все союзники были уничтожены.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/deadly_accuracy.png"
+      },
+      "vehicle_type": "AT-SPG",
+      "name": "Смертельная точность"
+    },
+    "battle_rage": {
+      "skill_id": "battle_rage",
+      "features": "Не действует на технике с многозарядными орудиями.",
+      "tip": "Наиболее эффективен для техники с большим разовым уроном и длительной перезарядкой.",
+      "effect": "Ускоряет на 20% перезарядку орудия перед следующим выстрелом после уничтожения противника.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/battle_rage.png"
+      },
+      "vehicle_type": "mediumTank",
+      "name": "Кураж"
+    },
+    "armour_piercing": {
+      "skill_id": "armour_piercing",
+      "features": "При срабатывании навыка бронепробиваемость составляет 100–125% от значения в характеристиках техники, а при обычном выстреле — 75–125%.",
+      "tip": null,
+      "effect": "Даёт шанс в 20% сделать выстрел с повышенной бронепробиваемостью.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/armour_piercing.png"
+      },
+      "vehicle_type": "mediumTank",
+      "name": "Бронебойщик"
+    },
+    "desperado": {
+      "skill_id": "desperado",
+      "features": null,
+      "tip": "Наиболее эффективен для техники с большим запасом прочности и толстой бронёй.",
+      "effect": "Ускоряет на 20% перезарядку орудия, когда у техники осталось менее 15% прочности.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/desperado.png"
+      },
+      "vehicle_type": "heavyTank",
+      "name": "Отчаянный"
+    },
+    "camouflage": {
+      "skill_id": "camouflage",
+      "features": null,
+      "tip": "Наиболее эффективен для техники с небольшими габаритами и низким профилем.",
+      "effect": "Увеличивает на 60% первоначальный показатель маскировки техники.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/camouflage.png"
+      },
+      "vehicle_type": "AT-SPG",
+      "name": "Маскировка"
+    },
+    "virtuoso": {
+      "skill_id": "virtuoso",
+      "features": null,
+      "tip": null,
+      "effect": "Увеличивает на 20% скорость поворота техники.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/virtuoso.png"
+      },
+      "vehicle_type": "AT-SPG",
+      "name": "Виртуоз"
+    },
+    "tutor": {
+      "skill_id": "tutor",
+      "features": null,
+      "tip": null,
+      "effect": "Увеличивает на 20% получаемый опыт экипажа.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/tutor.png"
+      },
+      "vehicle_type": "mediumTank",
+      "name": "Наставник"
+    },
+    "smooth_turret": {
+      "skill_id": "smooth_turret",
+      "features": "У техники без башни уменьшает разброс при повороте орудия.",
+      "tip": "Наиболее эффективен для техники, которая ведёт огонь на ходу.",
+      "effect": "Уменьшает на 40% разброс орудия при повороте башни.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/smooth_turret.png"
+      },
+      "vehicle_type": "mediumTank",
+      "name": "Плавный поворот башни"
+    },
+    "fire_fighting": {
+      "skill_id": "fire_fighting",
+      "features": null,
+      "tip": "Наиболее эффективен для техники, которая часто загорается в бою.",
+      "effect": "Ускоряет тушение пожара на 120%.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/fire_fighting.png"
+      },
+      "vehicle_type": "heavyTank",
+      "name": "Пожаротушение"
+    },
+    "skilled_repairer": {
+      "skill_id": "skilled_repairer",
+      "features": null,
+      "tip": null,
+      "effect": "Сокращает на 100% потерю эффективности модулей при некритических повреждениях.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/skilled_repairer.png"
+      },
+      "vehicle_type": "heavyTank",
+      "name": "Абсолютная надёжность"
+    },
+    "soft_recoil": {
+      "skill_id": "soft_recoil",
+      "features": null,
+      "tip": "Наиболее эффективен для техники с многозарядными орудиями.",
+      "effect": "Уменьшает на 20% разброс орудия после выстрела.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/soft_recoil.png"
+      },
+      "vehicle_type": "lightTank",
+      "name": "Мягкая отдача"
+    },
+    "surrounded_by_enemy": {
+      "skill_id": "surrounded_by_enemy",
+      "features": null,
+      "tip": "Наиболее эффективен для техники, ведущей активные наступательные действия.",
+      "effect": "Увеличивает набор скорости на 20%, если в радиусе 50 метров от вашей техники находятся не менее 2 противников.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/surrounded_by_enemy.png"
+      },
+      "vehicle_type": "lightTank",
+      "name": "В кругу врагов"
+    },
+    "close_combat_master": {
+      "skill_id": "close_combat_master",
+      "features": null,
+      "tip": "Наиболее эффективен для тяжёлых танков с медленным поворотом башни.",
+      "effect": "Увеличивает на 20% скорость поворота башни, если в радиусе 30 метров от вашей техники находится противник.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/close_combat_master.png"
+      },
+      "vehicle_type": "heavyTank",
+      "name": "Мастер ближнего боя"
+    },
+    "lucky_shot": {
+      "skill_id": "lucky_shot",
+      "features": null,
+      "tip": "Наиболее эффективен для техники, которая ведёт огонь на ходу.",
+      "effect": "Даёт шанс в 20% сделать точный выстрел при превышении минимального разброса орудия более чем на 100%.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/lucky_shot.png"
+      },
+      "vehicle_type": "lightTank",
+      "name": "Стрельба наудачу"
+    },
+    "sniper": {
+      "skill_id": "sniper",
+      "features": "При срабатывании навыка вероятность повреждения модуля техники противника составляет 100%, а при обычном выстреле — от 27% до 100%, в зависимости от типа модуля.",
+      "tip": null,
+      "effect": "Даёт шанс в 20% произвести выстрел, гарантированно повреждающий модули противника при попадании по ним.",
+      "images": {
+        "large": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/skill\/sniper.png"
+      },
+      "vehicle_type": "AT-SPG",
+      "name": "Снайпер"
+    }
+  }
+}

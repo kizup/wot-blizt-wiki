@@ -1,5 +1,6 @@
 package ru.kizup.wotblitzhelper.models.view_vehicle;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

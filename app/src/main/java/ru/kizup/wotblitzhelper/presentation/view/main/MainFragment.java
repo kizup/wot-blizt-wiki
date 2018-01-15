@@ -3,12 +3,8 @@ package ru.kizup.wotblitzhelper.presentation.view.main;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
@@ -19,11 +15,11 @@ import ru.kizup.wotblitzhelper.HelperApp;
 import ru.kizup.wotblitzhelper.R;
 import ru.kizup.wotblitzhelper.base.BaseFragment;
 import ru.kizup.wotblitzhelper.di.main.MainModule;
+import ru.kizup.wotblitzhelper.presentation.presenter.main.IMainPresenter;
 import ru.kizup.wotblitzhelper.presentation.view.achievements.AchievementsFragment;
 import ru.kizup.wotblitzhelper.presentation.view.common_info.CommonInfoFragment;
-import ru.kizup.wotblitzhelper.presentation.presenter.main.IMainPresenter;
 import ru.kizup.wotblitzhelper.presentation.view.crew_skills.CrewSkillsFragment;
-import ru.kizup.wotblitzhelper.presentation.view.vehicles.VehiclesFragment;
+import ru.kizup.wotblitzhelper.presentation.view.vehicles_grid.VehiclesGridFragment;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -97,12 +93,12 @@ public class MainFragment extends BaseFragment
 
     @Override
     public void showVehiclesScreen() {
-        showFragment(VehiclesFragment.newInstance());
+        showFragment(VehiclesGridFragment.newInstance());
     }
 
     @Override
     public void showRequestUpdateDatabaseDialog() {
-        new AlertDialog.Builder(getContext())
+        new AlertDialog.Builder(getContext(), R.style.AlertDialogCustom)
                 .setTitle("Database is out of date")
                 .setMessage("Do you want update database?")
                 .setCancelable(false)
@@ -113,7 +109,8 @@ public class MainFragment extends BaseFragment
 
     @Override
     public void showUpdateDialog() {
-        mProgressDialog = new ProgressDialog(getContext());
+        mProgressDialog = new ProgressDialog(getContext(), R.style.AlertDialogCustom);
+        mProgressDialog.setMessage("Updating database...");
         mProgressDialog.setCancelable(false);
         mProgressDialog.show();
     }

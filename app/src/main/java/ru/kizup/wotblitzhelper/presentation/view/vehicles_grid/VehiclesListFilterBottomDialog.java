@@ -1,4 +1,4 @@
-package ru.kizup.wotblitzhelper.presentation.view.vehicles;
+package ru.kizup.wotblitzhelper.presentation.view.vehicles_grid;
 
 import android.support.design.widget.BottomSheetDialogFragment;
 

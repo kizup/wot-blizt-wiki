@@ -8,6 +8,7 @@ import io.realm.RealmObject;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.vehicles.Images;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.EngineDataModel;
@@ -35,6 +36,8 @@ public interface IDatabaseHelper {
 
     Single<List<ShortVehicleInfoDataModel>> getAllVehicles();
 
+    Single<ShortVehicleInfoDataModel> getVehicleByNationAndType(String nation, String type);
+
     Single<List<ShortVehicleInfoDataModel>> getAllVehiclesByTier();
 
     Single<DetailVehicleDataModel> getDetailVehicleInfo(int id);
@@ -50,5 +53,9 @@ public interface IDatabaseHelper {
     Single<List<SuspensionDataModel>> getSuspensionsForVehicle(int vehicleId);
 
     Single<CommonInfoDataModel> getCommonWikiInfo();
+
+    Single<List<Images>> getAllImages();
+
+    Single<List<ShortVehicleInfoDataModel>> getVehiclesByNationAndType(String nation, String type);
 
 }

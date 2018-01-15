@@ -1,7 +1,6 @@
 package ru.kizup.wotblitzhelper.business.view_vehicle;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import io.reactivex.Observable;
@@ -10,9 +9,9 @@ import io.reactivex.SingleTransformer;
 import io.realm.RealmList;
 import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.business.VehiclesMapper;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
 import ru.kizup.wotblitzhelper.data.repositories.vehicles.IVehiclesRepository;
-import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoUIModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.ArmorDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
@@ -21,7 +20,6 @@ import ru.kizup.wotblitzhelper.models.view_vehicle.EngineDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.GunDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.GunUIModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.ModuleDataModel;
-import ru.kizup.wotblitzhelper.models.view_vehicle.ModuleUIModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.ModulesDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.NextTank;
 import ru.kizup.wotblitzhelper.models.view_vehicle.PriceXp;
@@ -41,15 +39,19 @@ public class ViewVehicleInteractor
         implements IViewVehicleInteractor {
 
     private IVehiclesRepository mVehiclesRepository;
+    private VehiclesMapper mVehiclesMapper;
 
-    public ViewVehicleInteractor(IVehiclesRepository vehiclesRepository) {
+    public ViewVehicleInteractor(IVehiclesRepository vehiclesRepository, VehiclesMapper mapper) {
         mVehiclesRepository = vehiclesRepository;
+        mVehiclesMapper = mapper;
     }
 
     @Override
     public Single<DetailVehicleUIModel> getVehicleDetailInformation(int id) {
         return getVehicleDetailDataModel(id)
-                .map(this::mapDataModel);
+                .map(dataModel -> mVehiclesMapper.toDetailUIModel(dataModel,
+                        mVehiclesRepository.getVehicleNationNameByCode(dataModel.getNation()).blockingGet(),
+                        mVehiclesRepository.getVehicleTypeNameByCode(dataModel.getType()).blockingGet()));
     }
 
     @Override
@@ -62,7 +64,7 @@ public class ViewVehicleInteractor
         }
         return mVehiclesRepository.getNextVehiclesShortInfo(ids)
                 .flatMapObservable(Observable::fromIterable)
-                .map(this::mapToUIModel)
+                .map(mVehiclesMapper::toShortUIModel)
                 .toList();
     }
 
@@ -211,131 +213,6 @@ public class ViewVehicleInteractor
                 })
                 .map(BaseResponse::getData)
                 .map(data -> getModulesFromResponseByType(type, data));
-    }
-
-    private DetailVehicleUIModel mapDataModel(DetailVehicleDataModel dataModel) {
-        String nation = mVehiclesRepository.getVehicleNationNameByCode(dataModel.getNation())
-                .blockingGet();
-
-        String type = mVehiclesRepository.getVehicleTypeNameByCode(dataModel.getType())
-                .blockingGet();
-
-        return new DetailVehicleUIModel(
-                dataModel.getTankId(),
-                dataModel.getDescription(),
-                nation,
-                dataModel.getImages(),
-                dataModel.getCost(),
-                mapProfileModel(dataModel.getDefaultProfile()),
-                dataModel.getTier(),
-                type,
-                dataModel.getName(),
-                new ArrayList<>(dataModel.getEngines()),
-                new ArrayList<>(dataModel.getSuspensions()),
-                new ArrayList<>(dataModel.getGuns()),
-                new ArrayList<>(dataModel.getTurrets()),
-                new ArrayList<>(dataModel.getPrices()),
-                new ArrayList<>(dataModel.getNextTanksList()),
-                mapModulesList(dataModel.getModulesList()),
-                dataModel.getPremium() == null ? false : dataModel.getPremium()
-        );
-    }
-
-    private List<ModuleUIModel> mapModulesList(List<ModuleDataModel> dataModels) {
-        if (dataModels == null || dataModels.isEmpty()) return Collections.emptyList();
-
-        List<ModuleUIModel> modules = new ArrayList<>(dataModels.size());
-        for (ModuleDataModel dataModel : dataModels) {
-            List<Integer> nextTanks = dataModel.getNextTanks() == null
-                    ? Collections.emptyList()
-                    : new ArrayList<>(dataModel.getNextTanks());
-            List<Integer> nextModules = dataModel.getNextModules() == null
-                    ? Collections.emptyList()
-                    : new ArrayList<>(dataModel.getNextModules());
-            modules.add(new ModuleUIModel(
-                    dataModel.getModuleId(),
-                    dataModel.getName(),
-                    dataModel.getDefault(),
-                    dataModel.getPriceXp(),
-                    dataModel.getPriceCredit(),
-                    dataModel.getType(),
-                    nextTanks,
-                    nextModules
-            ));
-        }
-        return modules;
-    }
-
-    private GunUIModel mapGunModel(GunDataModel dataModel, int id) {
-        if (dataModel == null) return null;
-        return new GunUIModel(
-                dataModel.getMoveDownArc(),
-                dataModel.getCaliber(),
-                dataModel.getName(),
-                dataModel.getWeight(),
-                dataModel.getMoveUpArc(),
-                dataModel.getFireRate(),
-                dataModel.getClipReloadTime(),
-                dataModel.getDispersion(),
-                dataModel.getClipCapacity(),
-                dataModel.getTraverseSpeed(),
-                dataModel.getReloadTime(),
-                dataModel.getTier(),
-                dataModel.getAimTime(),
-                id
-        );
-    }
-
-    private ProfileUIModel mapProfileModel(ProfileDataModel dataModel) {
-        if (dataModel == null) return null;
-
-        return new ProfileUIModel(
-                dataModel.getWeight(),
-                dataModel.getProfileId(),
-                dataModel.getFirepower(),
-                dataModel.getShotEfficiency(),
-                dataModel.getGunId(),
-                dataModel.getSignalRange(),
-                dataModel.getSpeedForward(),
-                dataModel.getBattleLevelRangeMin(),
-                dataModel.getSpeedBackward(),
-                dataModel.getEngine(),
-                dataModel.getMaxAmmo(),
-                dataModel.getBattleLevelRangeMax(),
-                dataModel.getEngineId(),
-                dataModel.getHp(),
-                dataModel.getDefault(),
-                dataModel.getProtection(),
-                dataModel.getSuspension(),
-                dataModel.getSuspensionId(),
-                dataModel.getMaxWeight(),
-                mapGunModel(dataModel.getGun(), dataModel.getGunId()),
-                dataModel.getTurretId(),
-                dataModel.getTurret(),
-                dataModel.getManeuverability(),
-                dataModel.getHullWeight(),
-                dataModel.getHullHp(),
-                new ArrayList<>(dataModel.getShells()),
-                new ArrayList<>(dataModel.getArmorsList())
-        );
-    }
-
-    private ShortVehicleInfoUIModel mapToUIModel(ShortVehicleInfoDataModel dataModel) {
-        String cost = dataModel.getCost() == null
-                ? String.valueOf(0)
-                : (dataModel.getCost().getPriceCredit() != null
-                ? String.valueOf(dataModel.getCost().getPriceCredit())
-                : String.valueOf(dataModel.getCost().getPriceGold()));
-        boolean isPremium = dataModel.getCost() != null && dataModel.getCost().getPriceGold() != null;
-        return new ShortVehicleInfoUIModel(
-                dataModel.getTankId(),
-                dataModel.getName(),
-                dataModel.getDescription(),
-                String.valueOf(dataModel.getTier()),
-                dataModel.getImages().getPreview(),
-                cost,
-                isPremium
-        );
     }
 
     private List<? extends VehicleModule> getModulesFromResponseByType(VehicleModule.Type type,

@@ -18,6 +18,4 @@ public interface IRepository {
 
     Single<HashMap<String, String>> getAllVehicleNations();
 
-    Single<List<AchievementSectionDataModel>> getAllAchievementSections();
-
 }

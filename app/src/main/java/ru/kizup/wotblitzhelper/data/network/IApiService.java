@@ -24,9 +24,6 @@ import ru.kizup.wotblitzhelper.models.view_vehicle.ModulesDataModel;
 public interface IApiService {
 
     @GET("achievements/")
-    Single<BaseResponse<HashMap<String, AchievementsModel>>> getAchievements(@Query("fields") String fields);
-
-    @GET("achievements/")
     Single<Response<BaseResponse<HashMap<String, AchievementsModel>>>> getAllAchievements();
 
     @GET("info/")

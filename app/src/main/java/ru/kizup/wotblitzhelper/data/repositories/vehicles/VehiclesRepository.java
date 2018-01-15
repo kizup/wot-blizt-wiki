@@ -91,24 +91,18 @@ public class VehiclesRepository extends Repository
     }
 
     @Override
-    public Single<List<ShortVehicleInfoDataModel>> getAllVehiclesFromDatabase() {
-        return getDatabaseHelper().getAllVehicles();
-    }
-
-    @Override
-    public Single<Response<BaseResponse<HashMap<String, ShortVehicleInfoDataModel>>>> getAllVehiclesFromServer() {
-        return getApiService().getShortAllVehicleInfo("tank_id,description,name,nation,tier,type,cost,images")
-                .singleOrError();
-    }
-
-    @Override
-    public Single<Boolean> saveAllVehiclesInDatabase(List<ShortVehicleInfoDataModel> vehicles) {
-        return null;
-    }
-
-    @Override
     public Single<Boolean> saveModel(RealmObject dataModel) {
         return getDatabaseHelper().saveModel(dataModel);
+    }
+
+    @Override
+    public Single<ShortVehicleInfoDataModel> getVehicleFromDatabase(String nation, String type) {
+        return getDatabaseHelper().getVehicleByNationAndType(nation, type);
+    }
+
+    @Override
+    public Single<List<ShortVehicleInfoDataModel>> getVehiclesFromDatabaseByNationAndType(String nation, String type) {
+        return getDatabaseHelper().getVehiclesByNationAndType(nation, type);
     }
 
     @Override

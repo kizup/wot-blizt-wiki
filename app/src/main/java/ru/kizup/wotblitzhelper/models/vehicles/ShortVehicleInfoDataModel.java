@@ -14,6 +14,10 @@ import io.realm.annotations.PrimaryKey;
 
 public class ShortVehicleInfoDataModel extends RealmObject {
 
+    public static ShortVehicleInfoDataModel empty() {
+        return new ShortVehicleInfoDataModel();
+    }
+
     @SerializedName("tank_id")
     @Expose
     @PrimaryKey
@@ -39,69 +43,43 @@ public class ShortVehicleInfoDataModel extends RealmObject {
     @SerializedName("type")
     @Expose
     private String type;
+    @SerializedName("is_premium")
+    @Expose
+    private boolean isPremium;
+
+    public Integer getTankId() {
+        return tankId;
+    }
 
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getNation() {
         return nation;
-    }
-
-    public void setNation(String nation) {
-        this.nation = nation;
     }
 
     public Integer getTier() {
         return tier;
     }
 
-    public void setTier(Integer tier) {
-        this.tier = tier;
-    }
-
     public Cost getCost() {
         return cost;
-    }
-
-    public void setCost(Cost cost) {
-        this.cost = cost;
     }
 
     public Images getImages() {
         return images;
     }
 
-    public void setImages(Images images) {
-        this.images = images;
-    }
-
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public boolean getPremium() {
+        return isPremium;
     }
-
-    public Integer getTankId() {
-        return tankId;
-    }
-
-    public void setTankId(Integer tankId) {
-        this.tankId = tankId;
-    }
-
 }

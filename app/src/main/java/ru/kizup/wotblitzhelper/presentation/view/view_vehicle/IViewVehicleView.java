@@ -56,4 +56,6 @@ public interface IViewVehicleView extends BaseView {
     void showVehicleModules(List<? extends VehicleModule> modules);
 
     void hideVehicleModules();
+
+    void setVehicleTypeImage(int typeDrawable);
 }

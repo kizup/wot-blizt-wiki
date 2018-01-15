@@ -26,30 +26,6 @@ public class AchievementsRepository extends Repository
 
     @Override
     public Single<HashMap<String, AchievementsModel>> getAchievementsShortInfo() {
-        return getDatabaseHelper().getAchievements()
-                .flatMap(map -> {
-                    if (map.isEmpty()) return getAchievementsFromServer();
-                    return Single.just(map);
-                });
-    }
-
-    private Single<HashMap<String, AchievementsModel>> getAchievementsFromServer() {
-        return getApiService().getAchievements("achievement_id,image,image_big,description,order,name")
-                .map(response -> {
-                    if (!response.isSuccess()) {
-                        throw new FailureResponseException(response.getError());
-                    }
-                    saveAchievements(response.getData());
-                    return response;
-                })
-                .map(BaseResponse::getData);
-    }
-
-    private void saveAchievements(HashMap<String, AchievementsModel> map) {
-        for (String key : map.keySet()) {
-            AchievementsModel model = map.get(key);
-            AchievementDao dao = new AchievementDao(key, model);
-            getDatabaseHelper().saveModel(dao).subscribe();
-        }
+        return getDatabaseHelper().getAchievements();
     }
 }

@@ -4,7 +4,7 @@ import dagger.Subcomponent;
 import ru.kizup.wotblitzhelper.presentation.view.vehicles.VehiclesFragment;
 
 /**
- * Created by: dpuzikov on 09.01.18.
+ * Created by: dpuzikov on 12.01.18.
  * e-mail: kizup.diman@gmail.com
  * Skype: kizupx
  */

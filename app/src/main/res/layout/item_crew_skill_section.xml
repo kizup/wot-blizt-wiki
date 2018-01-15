@@ -9,7 +9,8 @@
         android:id="@+id/tv_crew_skill_section_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent" />
 
     <ImageView
         android:id="@+id/iv_caret"

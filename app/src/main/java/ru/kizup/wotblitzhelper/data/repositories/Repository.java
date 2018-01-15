@@ -42,70 +42,12 @@ public class Repository implements IRepository {
 
     @Override
     public Single<HashMap<String, String>> getAllVehicleTypes() {
-        return mDatabaseHelper.getVehicleTypes()
-                .flatMap(map -> {
-                    if (map.isEmpty()) return getAllVehicleTypesFromServer();
-                    return Single.just(map);
-                });
+        return mDatabaseHelper.getVehicleTypes();
     }
 
     @Override
     public Single<HashMap<String, String>> getAllVehicleNations() {
-        return mDatabaseHelper.getVehicleNations()
-                .flatMap(map -> {
-                    if (map.isEmpty()) return getAllVehicleNationsFromServer();
-                    return Single.just(map);
-                });
-    }
-
-    @Override
-    public Single<List<AchievementSectionDataModel>> getAllAchievementSections() {
-        return mApiService.getCommonInfo("vehicle_nations")
-                .compose(responseTransformer())
-                .map(CommonInfoDataModel::getAchievementSections)
-                .flatMapObservable(map -> Observable.fromIterable(map.keySet())
-                        .doOnNext(s -> map.get(s).setCode(s))
-                        .map(map::get))
-                .toList();
-    }
-
-    private Single<HashMap<String, String>> getAllVehicleNationsFromServer() {
-        return mApiService.getCommonInfo("vehicle_nations")
-                .compose(responseTransformer())
-                .map(CommonInfoDataModel::getVehicleNations)
-                .doOnSuccess(this::saveVehicleNations);
-    }
-
-    private <D> SingleTransformer<Response<BaseResponse<D>>, D> responseTransformer() {
-        return upstream -> upstream.map(Response::body)
-                .flatMap(response -> {
-                    if (!response.isSuccess()) {
-                        return Single.error(new FailureResponseException(response.getError()));
-                    }
-                    return Single.fromCallable(() -> response);
-                })
-                .map(BaseResponse::getData);
-    }
-
-    private Single<HashMap<String, String>> getAllVehicleTypesFromServer() {
-        return mApiService.getCommonInfo("vehicle_types")
-                .compose(responseTransformer())
-                .map(CommonInfoDataModel::getVehicleTypes)
-                .doOnSuccess(this::saveVehicleTypes);
-    }
-
-    private void saveVehicleTypes(HashMap<String, String> types) {
-        for (String key : types.keySet()) {
-            VehicleTypeDao dao = new VehicleTypeDao(key, types.get(key));
-            mDatabaseHelper.saveModel(dao).subscribe();
-        }
-    }
-
-    private void saveVehicleNations(HashMap<String, String> nations) {
-        for (String key : nations.keySet()) {
-            VehicleNationDao dao = new VehicleNationDao(key, nations.get(key));
-            mDatabaseHelper.saveModel(dao).subscribe();
-        }
+        return mDatabaseHelper.getVehicleNations();
     }
 
 }

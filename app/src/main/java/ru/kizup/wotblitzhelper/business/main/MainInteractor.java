@@ -10,7 +10,6 @@ import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.SingleTransformer;
 import io.realm.RealmList;
-import okhttp3.internal.http.HttpCodec;
 import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.data.network.FailureResponseException;
@@ -45,7 +44,8 @@ public class MainInteractor
     private ModulesDataModel modulesDataModel;
     private Context mContext;
 
-    public MainInteractor(IMainRepository mainRepository, Context context) {
+    public MainInteractor(IMainRepository mainRepository,
+                          Context context) {
         mMainRepository = mainRepository;
         mContext = context;
     }

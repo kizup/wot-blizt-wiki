@@ -2,6 +2,9 @@ package ru.kizup.wotblitzhelper.di.application;
 
 import android.content.Context;
 
+import com.jakewharton.picasso.OkHttp3Downloader;
+import com.squareup.picasso.Cache;
+import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nonnull;
@@ -21,12 +24,21 @@ public class AppModule {
 
     private final Context mContext;
     private final Picasso mPicasso;
+    private final OkHttp3Downloader mOkHttp3Downloader;
 
     public AppModule(@Nonnull Context context) {
         mContext = context;
-        Picasso.Builder builder = new Picasso.Builder(mContext);
+        mOkHttp3Downloader = new OkHttp3Downloader(mContext.getCacheDir(), Integer.MAX_VALUE);
+        Picasso.Builder builder = new Picasso.Builder(mContext)
+                .downloader(mOkHttp3Downloader);
         mPicasso = builder.build();
         Picasso.setSingletonInstance(mPicasso);
+    }
+
+    @Provides
+    @Singleton
+    OkHttp3Downloader provideOkHttp3Downloader() {
+        return mOkHttp3Downloader;
     }
 
     @Provides

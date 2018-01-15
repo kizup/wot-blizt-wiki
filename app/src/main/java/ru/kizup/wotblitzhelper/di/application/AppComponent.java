@@ -13,6 +13,8 @@ import ru.kizup.wotblitzhelper.di.main.MainComponent;
 import ru.kizup.wotblitzhelper.di.main.MainModule;
 import ru.kizup.wotblitzhelper.di.vehicles.VehiclesComponent;
 import ru.kizup.wotblitzhelper.di.vehicles.VehiclesModule;
+import ru.kizup.wotblitzhelper.di.vehicles_grid.VehiclesGridComponent;
+import ru.kizup.wotblitzhelper.di.vehicles_grid.VehiclesGridModule;
 import ru.kizup.wotblitzhelper.di.view_vehicle.ViewVehicleComponent;
 import ru.kizup.wotblitzhelper.di.view_vehicle.ViewVehicleModule;
 
@@ -38,8 +40,10 @@ public interface AppComponent {
 
     CrewSkillsComponent with(CrewSkillsModule module);
 
-    VehiclesComponent with(VehiclesModule module);
+    VehiclesGridComponent with(VehiclesGridModule module);
 
     ViewVehicleComponent with(ViewVehicleModule module);
+
+    VehiclesComponent with(VehiclesModule module);
 
 }

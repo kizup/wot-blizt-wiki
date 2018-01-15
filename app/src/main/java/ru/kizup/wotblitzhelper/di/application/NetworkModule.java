@@ -1,5 +1,7 @@
 package ru.kizup.wotblitzhelper.di.application;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -15,6 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import ru.kizup.wotblitzhelper.models.Constants;
 import ru.kizup.wotblitzhelper.data.network.IApiService;
 import ru.kizup.wotblitzhelper.utils.network.ApplicationIdInterceptor;
+import ru.kizup.wotblitzhelper.utils.network.MockInterceptor;
+import ru.kizup.wotblitzhelper.utils.network.ResponseInterceptor;
 
 /**
  * Created by: dpuzikov on 27.12.17.
@@ -27,7 +31,7 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    OkHttpClient provideClient() {
+    OkHttpClient provideClient(Context context) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
@@ -36,7 +40,9 @@ public class NetworkModule {
         ApplicationIdInterceptor applicationIdInterceptor = new ApplicationIdInterceptor();
 
         builder.addInterceptor(loggingInterceptor);
+        builder.addInterceptor(new ResponseInterceptor());
         builder.addInterceptor(applicationIdInterceptor);
+        builder.addInterceptor(new MockInterceptor(context));
 
         return builder.build();
     }
@@ -54,6 +60,7 @@ public class NetworkModule {
         Retrofit.Builder builder = new Retrofit.Builder();
         builder.addConverterFactory(GsonConverterFactory.create(gson));
         builder.addCallAdapterFactory(RxJava2CallAdapterFactory.create());
+//        builder.baseUrl(Constants.MOCK_API_URL);
         builder.baseUrl(Constants.API_URL);
         builder.client(client);
         return builder.build();

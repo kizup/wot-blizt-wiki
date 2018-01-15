@@ -2,12 +2,14 @@ package ru.kizup.wotblitzhelper.presentation.view.view_vehicle;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.transition.Fade;
 import android.support.transition.Slide;
 import android.support.transition.TransitionManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,7 +25,6 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 import ru.kizup.wotblitzhelper.HelperApp;
 import ru.kizup.wotblitzhelper.R;
@@ -58,6 +59,8 @@ public class ViewVehicleFragment extends BaseFragment
     ProgressBar mLoadingIndicator;
     @BindView(R.id.sv_vehicle_info_container)
     ViewGroup mVehicleInfoContainer;
+
+    @Nullable
     @BindView(R.id.tv_vehicle_name)
     TextView mVehicleNameTextView;
     @BindView(R.id.iv_vehicle)
@@ -70,6 +73,8 @@ public class ViewVehicleFragment extends BaseFragment
     TextView mVehicleTierTextView;
     @BindView(R.id.tv_vehicle_nation)
     TextView mVehicleNationTextView;
+    @BindView(R.id.iv_vehicle_type)
+    ImageView mVehicleTypeImageView;
 
     @BindView(R.id.next_tanks_container)
     ViewGroup mNextTanksContainer;
@@ -118,6 +123,11 @@ public class ViewVehicleFragment extends BaseFragment
     @BindView(R.id.rv_vehicle_modules)
     RecyclerView mVehicleModulesRecyclerView;
 
+    @BindView(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout mCollapsingToolbarLayout;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
+
     private Unbinder mUnbinder;
     private NextTanksAdapter mNextTanksAdapter;
     private VehicleModulesAdapter mVehicleModulesAdapter;
@@ -155,10 +165,22 @@ public class ViewVehicleFragment extends BaseFragment
         mNextTanksRecyclerView.setAdapter(mNextTanksAdapter);
         mNextTanksRecyclerView.setNestedScrollingEnabled(false);
 
+        setToolbar(mToolbar);
+        setShowBackArrow();
+
+        mCollapsingToolbarLayout.setTitle("");
+        mToolbar.setTitle("");
+
         mVehicleModulesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         mPresenter.bindView(this);
         mPresenter.loadDetailVehicleInfo(getArguments().getInt(VEHICLE_ID_ARG));
+
+        OnItemClickListener<VehicleModule> listener = mPresenter::onVehicleModuleClick;
+        mTurretModuleButton.setOnItemClickListener(listener);
+        mGunModuleButton.setOnItemClickListener(listener);
+        mSuspensionModuleButton.setOnItemClickListener(listener);
+        mEngineModuleButton.setOnItemClickListener(listener);
     }
 
     @Override
@@ -192,21 +214,12 @@ public class ViewVehicleFragment extends BaseFragment
     @Override
     public void loadVehicleImage(String imageUrl) {
         mPicasso.load(imageUrl)
-                .into(mVehicleImageView, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                        mVehicleImageView.setVisibility(View.VISIBLE);
-                    }
-
-                    @Override
-                    public void onError() {
-                    }
-                });
+                .into(mVehicleImageView);
     }
 
     @Override
     public void setVehicleName(String name) {
-        mVehicleNameTextView.setText(name);
+        mCollapsingToolbarLayout.setTitle(name);
     }
 
     @Override
@@ -283,12 +296,6 @@ public class ViewVehicleFragment extends BaseFragment
         mGunModuleButton.setVehicleModule(gun);
         mSuspensionModuleButton.setVehicleModule(suspension);
         mEngineModuleButton.setVehicleModule(engine);
-
-        OnItemClickListener<VehicleModule> listener = mPresenter::onVehicleModuleClick;
-        mTurretModuleButton.setOnItemClickListener(listener);
-        mGunModuleButton.setOnItemClickListener(listener);
-        mSuspensionModuleButton.setOnItemClickListener(listener);
-        mEngineModuleButton.setOnItemClickListener(listener);
     }
 
     @Override
@@ -307,12 +314,12 @@ public class ViewVehicleFragment extends BaseFragment
     }
 
     @Override
-    public void onItemClick(ShortVehicleInfoUIModel item) {
-        mPresenter.onNextVehicleClick(item);
+    public void setVehicleTypeImage(int typeDrawable) {
+        mVehicleTypeImageView.setImageResource(typeDrawable);
     }
 
-    @OnClick(R.id.vehicle_info_container)
-    void onVehicleInfoContainerClick() {
-        mPresenter.onVehicleInfoContainerClick();
+    @Override
+    public void onItemClick(ShortVehicleInfoUIModel item) {
+        mPresenter.onNextVehicleClick(item);
     }
 }

@@ -34,9 +34,8 @@ public class CommonInfoModule {
 
     @Provides
     @CommonInfoScope
-    ICommonInfoRepository providesCommonInfoRepository(IApiService service) {
-        return new CommonInfoRepository(service);
-//        return new CommonInfoRepositoryTest();
+    ICommonInfoRepository providesCommonInfoRepository(IApiService service, IDatabaseHelper helper) {
+        return new CommonInfoRepository(service, helper);
     }
 
     @Provides

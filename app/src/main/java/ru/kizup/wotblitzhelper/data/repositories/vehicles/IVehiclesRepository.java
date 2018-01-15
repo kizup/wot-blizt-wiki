@@ -8,6 +8,7 @@ import io.reactivex.Single;
 import io.realm.RealmObject;
 import retrofit2.Response;
 import ru.kizup.wotblitzhelper.base.BaseResponse;
+import ru.kizup.wotblitzhelper.data.repositories.IRepository;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.EngineDataModel;
@@ -22,13 +23,11 @@ import ru.kizup.wotblitzhelper.models.view_vehicle.TurretDataModel;
  * Skype: kizupx
  */
 
-public interface IVehiclesRepository {
+public interface IVehiclesRepository extends IRepository {
 
     Single<String> getVehicleTypeNameByCode(String code);
 
     Single<String> getVehicleNationNameByCode(String code);
-
-//    Single<DetailVehicleDataModel> getDetailVehicleInfo(int id);
 
     Observable<BaseResponse<HashMap<String, DetailVehicleDataModel>>> getDetailVehicleInfoFromServer(int vehicleId);
 
@@ -46,12 +45,10 @@ public interface IVehiclesRepository {
 
     Single<Response<BaseResponse<ModulesDataModel>>> getModulesVehicleFromServer(Integer[] ids, String type);
 
-    Single<List<ShortVehicleInfoDataModel>> getAllVehiclesFromDatabase();
-
-    Single<Response<BaseResponse<HashMap<String, ShortVehicleInfoDataModel>>>> getAllVehiclesFromServer();
-
-    Single<Boolean> saveAllVehiclesInDatabase(List<ShortVehicleInfoDataModel> vehicles);
-
     Single<Boolean> saveModel(RealmObject object);
+
+    Single<ShortVehicleInfoDataModel> getVehicleFromDatabase(String nation, String type);
+
+    Single<List<ShortVehicleInfoDataModel>> getVehiclesFromDatabaseByNationAndType(String nation, String type);
 
 }

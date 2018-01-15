@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
+import io.realm.Sort;
 import io.realm.exceptions.RealmException;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.AchievementDao;
@@ -19,6 +21,7 @@ import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleNationDao;
 import ru.kizup.wotblitzhelper.models.common_info.VehicleTypeDao;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.vehicles.Images;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.EngineDataModel;
@@ -36,6 +39,10 @@ public class DatabaseHelper implements IDatabaseHelper {
 
     private static final String TANK_ID = "tankId";
     private static final String MODULE_ID = "id";
+    private static final String NATION = "nation";
+    private static final String TYPE = "type";
+    private static final String TIER = "tier";
+    private static final String PREMIUM = "isPremium";
 
     public DatabaseHelper(Context context) {
         Realm.init(context);
@@ -118,11 +125,44 @@ public class DatabaseHelper implements IDatabaseHelper {
     }
 
     @Override
+    public Single<ShortVehicleInfoDataModel> getVehicleByNationAndType(String nation, String type) {
+        return Single.fromCallable(() -> {
+            Realm realm = getRealm();
+
+            RealmQuery<ShortVehicleInfoDataModel> query = realm.where(ShortVehicleInfoDataModel.class)
+                    .equalTo(NATION, nation)
+                    .equalTo(TYPE, type);
+            if (query == null) {
+                close();
+                return ShortVehicleInfoDataModel.empty();
+            }
+
+            RealmResults<ShortVehicleInfoDataModel> model = query
+                    .findAll()
+                    .sort(TIER);
+//                    .last();
+            if (model == null || model.isEmpty()) {
+                close();
+                return ShortVehicleInfoDataModel.empty();
+            }
+
+            ShortVehicleInfoDataModel dataModel = model.last();
+            if (dataModel == null) {
+                close();
+                return ShortVehicleInfoDataModel.empty();
+            }
+            dataModel = realm.copyFromRealm(dataModel);
+            close();
+            return dataModel;
+        });
+    }
+
+    @Override
     public Single<List<ShortVehicleInfoDataModel>> getAllVehiclesByTier() {
         return Single.fromCallable(() -> {
             List<ShortVehicleInfoDataModel> models = getRealm().copyFromRealm(getRealm()
                     .where(ShortVehicleInfoDataModel.class)
-                    .sort("tier")
+                    .sort(TIER)
                     .findAll());
             close();
             return models;
@@ -320,6 +360,44 @@ public class DatabaseHelper implements IDatabaseHelper {
             model = realm.copyFromRealm(model);
             close();
             return model;
+        });
+    }
+
+    @Override
+    public Single<List<Images>> getAllImages() {
+        return Single.fromCallable(() -> {
+            Realm realm = getRealm();
+            RealmResults<Images> results = realm.where(Images.class).findAll();
+            List<Images> images = realm.copyFromRealm(results);
+            close();
+            return images;
+        });
+    }
+
+    @Override
+    public Single<List<ShortVehicleInfoDataModel>> getVehiclesByNationAndType(String nation, String type) {
+        return Single.fromCallable(() -> {
+            Realm realm = getRealm();
+
+            RealmQuery<ShortVehicleInfoDataModel> query = realm.where(ShortVehicleInfoDataModel.class)
+                    .equalTo(NATION, nation)
+                    .equalTo(TYPE, type)
+                    .sort(new String[] {PREMIUM, TIER}, new Sort[]{Sort.DESCENDING, Sort.ASCENDING});
+
+            if (query == null) {
+                close();
+                throw new EntityNotFoundException();
+            }
+
+            RealmResults<ShortVehicleInfoDataModel> results = query.findAll();
+            if (results == null) {
+                close();
+                throw new EntityNotFoundException();
+            }
+
+            List<ShortVehicleInfoDataModel> models = realm.copyFromRealm(results);
+            close();
+            return models;
         });
     }
 

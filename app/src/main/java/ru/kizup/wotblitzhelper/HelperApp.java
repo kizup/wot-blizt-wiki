@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import ru.kizup.wotblitzhelper.di.application.AppComponent;
 import ru.kizup.wotblitzhelper.di.application.AppModule;
 import ru.kizup.wotblitzhelper.di.application.DaggerAppComponent;
+import ru.kizup.wotblitzhelper.di.application.NetworkModule;
 import ru.kizup.wotblitzhelper.di.application.UtilsModule;
 
 /**
@@ -34,6 +35,7 @@ public class HelperApp extends Application {
         mAppComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
                 .utilsModule(new UtilsModule())
+                .networkModule(new NetworkModule())
                 .build();
     }
 

@@ -26,30 +26,7 @@ public class CrewSkillsRepository extends Repository
 
     @Override
     public Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkills() {
-        return getDatabaseHelper().getCrewSkills()
-                .flatMap(map -> {
-                    if (map.isEmpty()) return getAllCrewSkillsFromServer();
-                    return Single.just(map);
-                });
-    }
-
-    private Single<HashMap<String, CrewSkillDataModel>> getAllCrewSkillsFromServer() {
-        return getApiService().getAllCrewSkills()
-                .map(Response::body)
-                .flatMap(response -> {
-                    if (!response.isSuccess()) {
-                        return Single.error(new FailureResponseException(response.getError()));
-                    }
-                    return Single.fromCallable(() -> response);
-                })
-                .map(BaseResponse::getData)
-                .doOnSuccess(this::saveCrewSkills);
-    }
-
-    private void saveCrewSkills(HashMap<String, CrewSkillDataModel> crewSkills) {
-        for (String key : crewSkills.keySet()) {
-            getDatabaseHelper().saveModel(crewSkills.get(key)).subscribe();
-        }
+        return getDatabaseHelper().getCrewSkills();
     }
 
 }

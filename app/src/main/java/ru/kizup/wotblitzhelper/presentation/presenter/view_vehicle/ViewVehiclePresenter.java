@@ -174,6 +174,7 @@ public class ViewVehiclePresenter implements IViewVehiclePresenter {
         mVehicleView.setVehicleType(uiModel.getType());
         mVehicleView.setVehicleTier(RomanNumber.toRoman(uiModel.getTier()));
         mVehicleView.setShowPremiumIcon(uiModel.isPremium());
+        mVehicleView.setVehicleTypeImage(uiModel.getTypeDrawable());
 
         setVehicleProfileInfo(uiModel.getDefaultProfile());
 

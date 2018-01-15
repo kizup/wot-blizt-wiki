@@ -1,6 +1,7 @@
 package ru.kizup.wotblitzhelper.data.repositories.main;
 
 import java.util.HashMap;
+import java.util.List;
 
 import io.reactivex.Single;
 import io.realm.RealmObject;
@@ -9,6 +10,7 @@ import ru.kizup.wotblitzhelper.base.BaseResponse;
 import ru.kizup.wotblitzhelper.models.achievements.AchievementsModel;
 import ru.kizup.wotblitzhelper.models.common_info.CommonInfoDataModel;
 import ru.kizup.wotblitzhelper.models.crew_skills.CrewSkillDataModel;
+import ru.kizup.wotblitzhelper.models.vehicles.Images;
 import ru.kizup.wotblitzhelper.models.vehicles.ShortVehicleInfoDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.DetailVehicleDataModel;
 import ru.kizup.wotblitzhelper.models.view_vehicle.ModulesDataModel;
@@ -38,5 +40,7 @@ public interface IMainRepository {
     Single<CommonInfoDataModel> getCommonInfoFromDatabase();
 
     Single<Response<BaseResponse<CommonInfoDataModel>>> getGameVersionFromServer();
+
+    Single<List<Images>> getAllImagesFromDatabase();
 
 }

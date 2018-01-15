@@ -1,5 +1,7 @@
 package ru.kizup.wotblitzhelper.models.view_vehicle;
 
+import android.support.annotation.DrawableRes;
+
 import java.util.List;
 
 import ru.kizup.wotblitzhelper.models.vehicles.Cost;
@@ -30,6 +32,7 @@ public class DetailVehicleUIModel {
     private List<PriceXp> prices = null;
     private List<NextTank> nextTanksList = null;
     private List<ModuleUIModel> modulesList = null;
+    private @DrawableRes int typeDrawable;
 
     public DetailVehicleUIModel(Integer tankId,
                                 String description,
@@ -65,6 +68,10 @@ public class DetailVehicleUIModel {
         this.nextTanksList = nextTanksList;
         this.modulesList = modulesList;
         this.premium = premium;
+    }
+
+    public void setTypeDrawable(@DrawableRes int typeDrawable) {
+        this.typeDrawable = typeDrawable;
     }
 
     public Integer getTankId() {
@@ -133,5 +140,9 @@ public class DetailVehicleUIModel {
 
     public boolean isPremium() {
         return premium;
+    }
+
+    public @DrawableRes int getTypeDrawable() {
+        return typeDrawable;
     }
 }

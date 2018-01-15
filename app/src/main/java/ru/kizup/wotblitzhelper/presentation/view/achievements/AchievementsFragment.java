@@ -71,7 +71,8 @@ public class AchievementsFragment extends BaseFragment
         mAchievementsPresenter.bindView(this);
         mAchievementsPresenter.loadShortAchievementsInfo();
 
-        mAchievementsRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        mAchievementsRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),
+                getResources().getInteger(R.integer.vehicles_span_count)));
         mAchievementsRecyclerView.setAdapter(mAchievementsAdapter);
     }
 

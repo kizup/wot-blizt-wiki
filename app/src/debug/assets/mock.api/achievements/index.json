@@ -1,0 +1,1502 @@
+{
+  "status": "ok",
+  "meta": {
+    "count": 114
+  },
+  "data": {
+    "armorPiercer": {
+      "name": "«Бронебойщик»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/armorPiercer.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "armorPiercer",
+      "order": 1014,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/armorPiercer.png",
+      "condition": "• Серия прерывается непробитием, рикошетом или промахом.\n• Серия ведётся для каждой машины отдельно и может продолжиться в следующем бою на этой же машине.\n• В общий зачёт идёт максимальная серия.",
+      "description": "Пробить броню противника не менее 10 раз подряд."
+    },
+    "medalFadin": {
+      "name": "Медаль Фадина",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalFadin.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalFadin",
+      "order": 804,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalFadin.png",
+      "condition": "• Если противник уничтожен пожаром, вызванным попаданием последнего снаряда, медаль также выдаётся.\n• При стрельбе из автоматических орудий противник должен быть уничтожен последним снарядом в очереди.",
+      "description": "Уничтожить последним снарядом последнюю машину противника."
+    },
+    "medalCarius": {
+      "name": "Медаль Кариуса",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCarius1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCarius1.png",
+        "name": "Медаль Кариуса\n I степени",
+        "description": "За количество уничтоженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCarius2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCarius2.png",
+        "name": "Медаль Кариуса\n II степени",
+        "description": "За количество уничтоженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCarius3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCarius3.png",
+        "name": "Медаль Кариуса\n III степени",
+        "description": "За количество уничтоженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCarius4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCarius4.png",
+        "name": "Медаль Кариуса\n IV степени",
+        "description": "За количество уничтоженной техники противника."
+      }],
+      "achievement_id": "medalCarius",
+      "order": 1401,
+      "image": null,
+      "condition": "• IV степени – 10\n• III степени – 100\n• II степени – 1 000\n• I степени – 10 000",
+      "description": "За количество уничтоженной техники противника."
+    },
+    "medalEkins": {
+      "name": "Медаль Экинса",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalEkins1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalEkins1.png",
+        "name": "Медаль Экинса\n I степени",
+        "description": "За количество уничтоженной техники противника VIII–X уровней."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalEkins2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalEkins2.png",
+        "name": "Медаль Экинса\n II степени",
+        "description": "За количество уничтоженной техники противника VIII–X уровней."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalEkins3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalEkins3.png",
+        "name": "Медаль Экинса\n III степени",
+        "description": "За количество уничтоженной техники противника VIII–X уровней."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalEkins4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalEkins4.png",
+        "name": "Медаль Экинса\n IV степени",
+        "description": "За количество уничтоженной техники противника VIII–X уровней."
+      }],
+      "achievement_id": "medalEkins",
+      "order": 1402,
+      "image": null,
+      "condition": "• IV степени – 3\n• III степени – 30\n• II степени – 300\n• I степени – 3 000",
+      "description": "За количество уничтоженной техники противника VIII–X уровней."
+    },
+    "collectorGuP": {
+      "name": "«GuP: Коллекционер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/collectorGuP.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "collectorGuP",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/collectorGuP.png",
+      "condition": "\t• Hetzer Kame SP\n\t• Panzer IV Anko Special\n\t• Kuro Mori Mine\n\n• Награждаются игроки, у которых на момент окончания события «GuP: Коллекция» в Ангаре находятся все перечисленные машины.",
+      "description": "Уникальная награда для игроков, собравших 3 боевые машины из коллекции «Girls und Panzer»:"
+    },
+    "medalHalonen": {
+      "name": "Медаль Халонена",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalHalonen.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalHalonen",
+      "order": 606,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalHalonen.png",
+      "condition": "• Уничтоженная техника должна превосходить ПТ-САУ игрока как минимум на 1 уровень.",
+      "description": "Уничтожить не менее 3 машин противника в одном бою, управляя ПТ-САУ."
+    },
+    "heroesOfRassenay": {
+      "name": "Медаль героев Расейняя",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/heroesOfRassenay.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "heroesOfRassenay",
+      "order": 100,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/heroesOfRassenay.png",
+      "condition": null,
+      "description": "Уничтожить 7 машин противника в одном бою."
+    },
+    "firstVictory": {
+      "name": "«Первая победа»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/firstVictory.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "firstVictory",
+      "order": 1053,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/firstVictory.png",
+      "condition": null,
+      "description": "Победить в первом обычном бою с другими игроками."
+    },
+    "defender": {
+      "name": "«Защитник»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/defender.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "defender",
+      "order": 202,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/defender.png",
+      "condition": "• При равном количестве сбитых очков награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.\n• Не засчитываются очки захвата точек, полученные в режиме «Превосходство».",
+      "description": "Защитить базу, сбив наибольшее количество очков захвата, но не менее 70."
+    },
+    "eSportFinal": {
+      "name": "«Участник онлайн-финалов Blitz Twister Cup»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/eSportFinal.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "eSportFinal",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/eSportFinal.png",
+      "condition": null,
+      "description": "Выдаётся командам, дошедшим до онлайн-финалов Blitz Twister Cup, главного международного турнира по World of Tanks Blitz."
+    },
+    "supporter": {
+      "name": "«Поддержка»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/supporter.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "supporter",
+      "order": 5,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/supporter.png",
+      "condition": "• Засчитываются цели, которые впоследствии были уничтожены другими игроками или самоуничтожились.\n• Рикошеты и непробития не учитываются.\n• При равном количестве повреждённой техники награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Нанести урон или сбить гусеницу наибольшему количеству машин противника, но не менее чем 4."
+    },
+    "goldClanRibbonSEA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldClanRibbonSEA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldClanRibbonSEA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldClanRibbonSEA.png",
+      "condition": "Награждаются все игроки кланов, занявших 10–27 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "platinumTwisterMedalSEA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumTwisterMedalSEA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumTwisterMedalSEA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumTwisterMedalSEA.png",
+      "condition": "• Награждаются игроки кланов, занявших 4–9 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».\n• Игрок должен получить не менее 100 Кубков IX–X.",
+      "description": null
+    },
+    "medalLehvaslaiho": {
+      "name": "Медаль Лехвеслайхо",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLehvaslaiho.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalLehvaslaiho",
+      "order": 604,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLehvaslaiho.png",
+      "condition": "• Уничтоженная техника должна превосходить боевую машину игрока как минимум на 1 уровень.",
+      "description": "Уничтожить 2 машины противника в одном бою, управляя средним танком."
+    },
+    "tankExpert": {
+      "name": "«Эксперт»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert",
+      "order": 1101,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков каждой нации, исключая премиум и наградные машины."
+    },
+    "eSportQualification": {
+      "name": "«Участник отборочного этапа Blitz Twister Cup»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/eSportQualification.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "eSportQualification",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/eSportQualification.png",
+      "condition": null,
+      "description": "Выдаётся командам, вышедшим в плей-офф Blitz Twister Cup, главного международного турнира по World of Tanks Blitz."
+    },
+    "MarkI": {
+      "name": "«Сто лет в строю»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/MarkI.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "MarkI",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/MarkI.png",
+      "condition": "• Провести не менее 10 боёв на Mk I* Heavy Tank.",
+      "description": "Уникальная награда, посвящённая игровому событию «100 лет танкам»."
+    },
+    "medalSupremacy": {
+      "name": "Медаль режима «Превосходство»",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalSupremacy1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalSupremacy1.png",
+        "name": "Медаль режима «Превосходство» I степени",
+        "description": "За количество набранных очков победы в режиме «Превосходство»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalSupremacy2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalSupremacy2.png",
+        "name": "Медаль режима «Превосходство» II степени",
+        "description": "За количество набранных очков победы в режиме «Превосходство»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalSupremacy3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalSupremacy3.png",
+        "name": "Медаль режима «Превосходство» III степени",
+        "description": "За количество набранных очков победы в режиме «Превосходство»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalSupremacy4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalSupremacy4.png",
+        "name": "Медаль режима «Превосходство» IV степени",
+        "description": "За количество набранных очков победы в режиме «Превосходство»."
+      }],
+      "achievement_id": "medalSupremacy",
+      "order": 1408,
+      "image": null,
+      "condition": "• Накопительная медаль.\n• Засчитываются все очки победы, набранные в боях в режиме «Превосходство».\n\n• IV степени – 10 000\n• III степени – 100 000\n• II степени – 1 000 000\n• I степени – 10 000 000",
+      "description": "За количество набранных очков победы в режиме «Превосходство»."
+    },
+    "participantofWGFest2017": {
+      "name": "«Участник WG Fest 2017»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/participantofWGFest2017.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "participantofWGFest2017",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/participantofWGFest2017.png",
+      "condition": "• Награждаются все игроки, получившие пригласительный на WG Fest 2017.\n• Выдаётся одна награда за любое количество пригласительных.",
+      "description": "Выдаётся за посещение мероприятия WG Fest 2017."
+    },
+    "jointVictory": {
+      "name": "«Совместная победа»",
+      "image_big": null,
+      "section": "platoon",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/jointVictory1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/jointVictory1.png",
+        "name": "«Совместная победа»\n I степени",
+        "description": "За количество победных боёв в составе взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/jointVictory2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/jointVictory2.png",
+        "name": "«Совместная победа»\n II степени",
+        "description": "За количество победных боёв в составе взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/jointVictory3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/jointVictory3.png",
+        "name": "«Совместная победа»\n III степени",
+        "description": "За количество победных боёв в составе взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/jointVictory4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/jointVictory4.png",
+        "name": "«Совместная победа»\n IV степени",
+        "description": "За количество победных боёв в составе взвода."
+      }],
+      "achievement_id": "jointVictory",
+      "order": 1055,
+      "image": null,
+      "condition": "• IV степени – 1\n• III степени – 10\n• II степени – 100\n• I степени – 1 000",
+      "description": "За количество победных боёв в составе взвода."
+    },
+    "platinumClanRibbonRU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumClanRibbonRU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumClanRibbonRU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumClanRibbonRU.png",
+      "condition": "Награждаются все игроки кланов, занявших 4–25 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "sniper": {
+      "name": "«Снайпер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/sniper.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "sniper",
+      "order": 205,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/sniper.png",
+      "condition": "• Непробитие засчитывается.\n• Нельзя задевать союзников прямыми выстрелами.\n• При равном проценте попаданий награждается игрок, попавший по противнику большее количество раз.\n• При равном количестве попаданий награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Произвести не менее 85% попаданий по противнику, сделав минимум 10 выстрелов с потенциальным уроном не менее 1 000 единиц."
+    },
+    "titleSniper": {
+      "name": "«Стрелок»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/titleSniper.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "titleSniper",
+      "order": 1015,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/titleSniper.png",
+      "condition": "• Серия прерывается промахом.\n• Серия ведётся для каждой машины отдельно и может продолжиться в следующем бою на этой же машине.\n• В общий зачёт идёт максимальная серия.",
+      "description": "Попасть в противника не менее 10 раз подряд."
+    },
+    "medalCrucialContribution": {
+      "name": "«Решающий вклад»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCrucialContribution.png",
+      "section": "platoon",
+      "options": null,
+      "achievement_id": "medalCrucialContribution",
+      "order": 400,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCrucialContribution.png",
+      "condition": "• Выдаётся обоим игрокам взвода.",
+      "description": "Взвод должен уничтожить не менее 6 машин противника."
+    },
+    "scout": {
+      "name": "«Разведчик»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/scout.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "scout",
+      "order": 204,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/scout.png",
+      "condition": "• Победить в бою.\n• Выдаётся только одна награда за бой.",
+      "description": "Обнаружить наибольшее количество машин противника, но не менее 5."
+    },
+    "goldTwisterMedalRU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldTwisterMedalRU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldTwisterMedalRU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldTwisterMedalRU.png",
+      "condition": "• Награждаются игроки кланов, занявших 26–75 место в Зале славы среди IX–X уровней техники по итогам сезона.\n• Игрок должен получить не менее 10 Кубков IX–X.",
+      "description": null
+    },
+    "tankExpert3": {
+      "name": "«Эксперт: Китай»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert3.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert3",
+      "order": 1303,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert3.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков Китая, исключая премиум и наградные машины."
+    },
+    "tankExpert2": {
+      "name": "«Эксперт: США»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert2.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert2",
+      "order": 1302,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert2.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков США, исключая премиум и наградные машины."
+    },
+    "tankExpert1": {
+      "name": "«Эксперт: Германия»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert1.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert1",
+      "order": 1301,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert1.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков Германии, исключая премиум и наградные машины."
+    },
+    "tankExpert0": {
+      "name": "«Эксперт: СССР»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert0.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert0",
+      "order": 1300,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert0.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков СССР, исключая премиум и наградные машины."
+    },
+    "markOfMastery": {
+      "name": "Знак классности",
+      "image_big": null,
+      "section": null,
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/markOfMastery1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/markOfMastery1.png",
+        "name": "Знак классности \n«3 степень»",
+        "description": "Присваивается игроку за мастерство владения боевой машиной. Для получения награды необходимо заработать больше опыта за бой, чем средний максимальный опыт за неделю у 50% игроков на данной технике."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/markOfMastery2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/markOfMastery2.png",
+        "name": "Знак классности \n«2 степень»",
+        "description": "Присваивается игроку за мастерство владения боевой машиной. Для получения награды необходимо заработать больше опыта за бой, чем средний максимальный опыт за неделю у 80% игроков на данной технике."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/markOfMastery3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/markOfMastery3.png",
+        "name": "Знак классности \n«1 степень»",
+        "description": "Присваивается игроку за мастерство владения боевой машиной. Для получения награды необходимо заработать больше опыта за бой, чем средний максимальный опыт за неделю у 95% игроков на данной технике."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/markOfMastery4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/markOfMastery4.png",
+        "name": "Знак классности \n«Мастер»",
+        "description": "Присваивается игроку за мастерство владения боевой машиной. Для получения награды необходимо заработать больше опыта за бой, чем средний максимальный опыт за неделю у 99% игроков на данной технике."
+      }],
+      "achievement_id": "markOfMastery",
+      "order": 0,
+      "image": null,
+      "condition": null,
+      "description": "Присваивается игроку за мастерство владения боевой машиной. Для получения награды необходимо заработать больше опыта за бой, чем средний максимальный опыт за неделю у 50% игроков на данной технике."
+    },
+    "tankExpert6": {
+      "name": "«Эксперт: Япония»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert6.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert6",
+      "order": 1306,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert6.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков Японии, исключая премиум и наградные машины."
+    },
+    "tankExpert5": {
+      "name": "«Эксперт: Великобритания»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert5.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert5",
+      "order": 1305,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert5.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков Великобритании, исключая премиум и наградные машины."
+    },
+    "tankExpert4": {
+      "name": "«Эксперт: Франция»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/tankExpert4.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "tankExpert4",
+      "order": 1304,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/tankExpert4.png",
+      "condition": null,
+      "description": "Уничтожить всю технику из Дерева танков Франции, исключая премиум и наградные машины."
+    },
+    "goldTwisterMedalEU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldTwisterMedalEU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldTwisterMedalEU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldTwisterMedalEU.png",
+      "condition": "• Награждаются игроки кланов, занявших 16–45 место в Зале славы среди IX–X уровней техники по итогам сезона.\n• Игрок должен получить не менее 10 Кубков IX–X.",
+      "description": null
+    },
+    "medalLavrinenko": {
+      "name": "Медаль Лавриненко",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLavrinenko1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLavrinenko1.png",
+        "name": "Медаль Лавриненко\n I степени",
+        "description": "За суммарное количество сбитых очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLavrinenko2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLavrinenko2.png",
+        "name": "Медаль Лавриненко\n II степени",
+        "description": "За суммарное количество сбитых очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLavrinenko3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLavrinenko3.png",
+        "name": "Медаль Лавриненко\n III степени",
+        "description": "За суммарное количество сбитых очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLavrinenko4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLavrinenko4.png",
+        "name": "Медаль Лавриненко\n IV степени",
+        "description": "За суммарное количество сбитых очков захвата базы."
+      }],
+      "achievement_id": "medalLavrinenko",
+      "order": 1407,
+      "image": null,
+      "condition": "• Засчитывается не более 100 очков за бой.\n• Не засчитываются сбитые очки захвата точек, заработанные в режиме «Превосходство»\n\n• IV степени – 30\n• III степени – 300\n• II степени – 3 000\n• I степени – 30 000",
+      "description": "За суммарное количество сбитых очков захвата базы."
+    },
+    "medalKolobanov": {
+      "name": "Медаль Колобанова",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKolobanov.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalKolobanov",
+      "order": 600,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKolobanov.png",
+      "condition": "• Выжить в бою.",
+      "description": "Победить в бою, оставшись в одиночку против 3 машин противника."
+    },
+    "medalLafayettePool": {
+      "name": "Медаль Пула",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLafayettePool.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalLafayettePool",
+      "order": 101,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLafayettePool.png",
+      "condition": "• Управлять техникой V уровня и выше.",
+      "description": "Уничтожить 6 машин противника в одном бою."
+    },
+    "goldClanRibbonEU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldClanRibbonEU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldClanRibbonEU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldClanRibbonEU.png",
+      "condition": "Награждаются все игроки кланов, занявших 16–45 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "olimpicGolden": {
+      "name": "«Блиц-игры: золото»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/olimpicGolden.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "olimpicGolden",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/olimpicGolden.png",
+      "condition": null,
+      "description": "• Уникальная награда для глобального игрового события «Блиц-игры 2016».\n• Награждаются все участники «Блиц-игр» при полном достижении общего прогресса."
+    },
+    "medalKnispel": {
+      "name": "Медаль Книспеля",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKnispel1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKnispel1.png",
+        "name": "Медаль Книспеля\n I степени",
+        "description": "За суммарное количество нанесённого и полученного урона."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKnispel2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKnispel2.png",
+        "name": "Медаль Книспеля\n II степени",
+        "description": "За суммарное количество нанесённого и полученного урона."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKnispel3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKnispel3.png",
+        "name": "Медаль Книспеля\n III степени",
+        "description": "За суммарное количество нанесённого и полученного урона."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKnispel4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKnispel4.png",
+        "name": "Медаль Книспеля\n IV степени",
+        "description": "За суммарное количество нанесённого и полученного урона."
+      }],
+      "achievement_id": "medalKnispel",
+      "order": 1403,
+      "image": null,
+      "condition": "• IV степени – 10 000\n• III степени – 100 000\n• II степени – 1 000 000\n• I степени – 10 000 000",
+      "description": "За суммарное количество нанесённого и полученного урона."
+    },
+    "invader": {
+      "name": "«Захватчик»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/invader.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "invader",
+      "order": 203,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/invader.png",
+      "condition": "• Выиграть бой захватом базы.\n• Засчитываются только очки, обеспечившие захват.\n• Не засчитываются очки захвата точек, полученные в режиме «Превосходство».",
+      "description": "Получить наибольшее количество очков захвата базы, но не менее 80."
+    },
+    "goldTwisterMedalNA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldTwisterMedalNA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldTwisterMedalNA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldTwisterMedalNA.png",
+      "condition": "• Награждаются игроки кланов, занявших 6–16 место в Зале славы среди IX–X уровней техники по итогам сезона.\n• Игрок должен получить не менее 10 Кубков IX–X.",
+      "description": null
+    },
+    "mechanicEngineer": {
+      "name": "«Старший инженер-механик»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer",
+      "order": 1100,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer.png",
+      "condition": null,
+      "description": "Исследовать технику всех наций."
+    },
+    "supremacyVeteran": {
+      "name": "«Матёрый»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/supremacyVeteran.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "supremacyVeteran",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/supremacyVeteran.png",
+      "condition": null,
+      "description": "Награждается игрок, получивший наибольшее суммарное количество опыта на технике с VI по X уровень за первый сезон соревнований «Превосходство»."
+    },
+    "firstBlood": {
+      "name": "«Первая кровь»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/firstBlood.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "firstBlood",
+      "order": 1052,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/firstBlood.png",
+      "condition": null,
+      "description": "Уничтожить 1 единицу техники противника."
+    },
+    "medalKay": {
+      "name": "Медаль Кея",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKay1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKay1.png",
+        "name": "Медаль Кея\n I степени",
+        "description": "За получение статуса «Герой Битвы»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKay2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKay2.png",
+        "name": "Медаль Кея\n II степени",
+        "description": "За получение статуса «Герой Битвы»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKay3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKay3.png",
+        "name": "Медаль Кея\n III степени",
+        "description": "За получение статуса «Герой Битвы»."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalKay4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalKay4.png",
+        "name": "Медаль Кея\n IV степени",
+        "description": "За получение статуса «Герой Битвы»."
+      }],
+      "achievement_id": "medalKay",
+      "order": 1400,
+      "image": null,
+      "condition": "• IV степени – 1\n• III степени – 10\n• II степени – 100\n• I степени – 1 000",
+      "description": "За получение статуса «Герой Битвы»."
+    },
+    "medalOrlik": {
+      "name": "Медаль Орлика",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalOrlik.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalOrlik",
+      "order": 605,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalOrlik.png",
+      "condition": "• Уничтоженная техника должна превосходить боевую машину игрока как минимум на 1 уровень.",
+      "description": "Уничтожить не менее 3 машин противника в одном бою, управляя лёгким танком."
+    },
+    "medalBrothersInArms": {
+      "name": "«Братья по оружию»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalBrothersInArms.png",
+      "section": "platoon",
+      "options": null,
+      "achievement_id": "medalBrothersInArms",
+      "order": 401,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalBrothersInArms.png",
+      "condition": "• Взвод должен выжить в бою.\n• Выдаётся обоим игрокам взвода.",
+      "description": "Каждый игрок взвода должен уничтожить не менее 2 машин противника."
+    },
+    "medalAbrams": {
+      "name": "Медаль Абрамса",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalAbrams1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalAbrams1.png",
+        "name": "Медаль Абрамса\n I степени",
+        "description": "За количество победных боёв, в которых игрок остался жив."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalAbrams2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalAbrams2.png",
+        "name": "Медаль Абрамса\n II степени",
+        "description": "За количество победных боёв, в которых игрок остался жив."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalAbrams3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalAbrams3.png",
+        "name": "Медаль Абрамса\n III степени",
+        "description": "За количество победных боёв, в которых игрок остался жив."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalAbrams4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalAbrams4.png",
+        "name": "Медаль Абрамса\n IV степени",
+        "description": "За количество победных боёв, в которых игрок остался жив."
+      }],
+      "achievement_id": "medalAbrams",
+      "order": 1405,
+      "image": null,
+      "condition": "• IV степени – 10\n• III степени – 100\n• II степени – 1 000\n• I степени – 10 000",
+      "description": "За количество победных боёв, в которых игрок остался жив."
+    },
+    "creative": {
+      "name": "«За творческий вклад»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/creative.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "creative",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/creative.png",
+      "condition": null,
+      "description": "• Уникальная награда, которая выдаётся с 2016 г. только по итогам творческих конкурсов, проводимых на официальных ресурсах Blitz.\n• Награждается игрок, чья работа заняла призовое место в творческом конкурсе.\n• Повторно полученные награды суммируются."
+    },
+    "mainGun": {
+      "name": "«Основной калибр»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mainGun.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "mainGun",
+      "order": 4,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mainGun.png",
+      "condition": "• Нанесённый урон должен составлять не менее 35% от суммарной прочности техники противника и не менее 1000 единиц.\n• При равном количестве нанесённого урона награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Нанести наибольшее количество урона за бой."
+    },
+    "ironMan": {
+      "name": "«Невозмутимый»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/ironMan.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "ironMan",
+      "order": 1007,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/ironMan.png",
+      "condition": null,
+      "description": "Получить подряд не менее 10 рикошетов и непробитий от противника."
+    },
+    "platinumClanRibbonEU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumClanRibbonEU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumClanRibbonEU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumClanRibbonEU.png",
+      "condition": "Награждаются все игроки кланов, занявших 4–15 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "platinumClanRibbonSEA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumClanRibbonSEA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumClanRibbonSEA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumClanRibbonSEA.png",
+      "condition": "Награждаются все игроки кланов, занявших 4–9 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "warrior": {
+      "name": "«Воин»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/warrior.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "warrior",
+      "order": 3,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/warrior.png",
+      "condition": "• При равном счёте награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Уничтожить наибольшее количество машин противника, но не менее 4."
+    },
+    "goldClanRibbonRU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldClanRibbonRU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldClanRibbonRU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldClanRibbonRU.png",
+      "condition": "Награждаются все игроки кланов, занявших 26–75 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "medalRadleyWalters": {
+      "name": "Медаль Рэдли-Уолтерса",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalRadleyWalters.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalRadleyWalters",
+      "order": 102,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalRadleyWalters.png",
+      "condition": "• Управлять техникой V уровня и выше.",
+      "description": "Уничтожить 5 машин противника в одном бою."
+    },
+    "raider": {
+      "name": "«Рейдер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/raider.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "raider",
+      "order": 1000,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/raider.png",
+      "condition": "• Случайные попадания и повреждения машины не являются препятствием.\n• Не засчитываются очки захвата точек, полученные в режиме «Превосходство».",
+      "description": "В одиночку захватить базу, не будучи обнаруженным в ходе боя."
+    },
+    "participantofNewStart": {
+      "name": "«Участник сезона «Новый старт»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/participantofNewStart.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "participantofNewStart",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/participantofNewStart.png",
+      "condition": "• Награждаются все игроки, сыгравшие хотя бы 1 бой в период сезона «Новый старт» в 2017 г.",
+      "description": "Уникальная награда, посвящённая сезону «Новый старт» в World of Tanks Blitz."
+    },
+    "diamondClanRibbon": {
+      "name": "«Бриллиантовая лента сезона «Твистер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/diamondClanRibbon.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "diamondClanRibbon",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/diamondClanRibbon.png",
+      "condition": "Награждаются все игроки кланов, занявших 1–3 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "medalBillotte": {
+      "name": "Медаль Бийота",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalBillotte.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalBillotte",
+      "order": 802,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalBillotte.png",
+      "condition": "• Победить в бою.\n• Выжить в бою.\n• Учёт уничтоженных машин противника начинается после получения всех перечисленных повреждений.",
+      "description": "Уничтожить 2 машины противника, получив не менее 5 критических повреждений и потеряв 80% прочности."
+    },
+    "platinumTwisterMedalEU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumTwisterMedalEU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumTwisterMedalEU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumTwisterMedalEU.png",
+      "condition": "• Награждаются игроки кланов, занявших 4–15 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».\n• Игрок должен получить не менее 100 Кубков IX–X.",
+      "description": null
+    },
+    "diehard": {
+      "name": "«Живучий»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/diehard.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "diehard",
+      "order": 106,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/diehard.png",
+      "condition": "• Серия ведётся для каждой единицы техники отдельно и может продолжиться в следующем бою на этой же машине.\n• В общий зачёт идёт максимальная серия.",
+      "description": "Выжить в 10 боях подряд на одной машине."
+    },
+    "masterofContinents": {
+      "name": "«Чемпион континентов»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/masterofContinents.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "masterofContinents",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/masterofContinents.png",
+      "condition": null,
+      "description": "Выдаётся всем игрокам региона, получившего первое место в глобальном игровом событии «Битва континентов» в октябре 2015 г. Каждый из вас — настоящий Чемпион континентов, по крайней мере, в этот раз…"
+    },
+    "evileye": {
+      "name": "«Дозорный»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/evileye.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "evileye",
+      "order": 200,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/evileye.png",
+      "condition": "• Засчитываются цели, разведданные по которым в момент их повреждения передавал только один игрок.\n• При равном количестве повреждённой техники награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Предоставить разведданные, по которым союзники повредят не менее 3 машин противника."
+    },
+    "cadet": {
+      "name": "«Кадет»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/cadet.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "cadet",
+      "order": 1051,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/cadet.png",
+      "condition": null,
+      "description": "Пройти боевое обучение."
+    },
+    "supremacyHunter": {
+      "name": "«Охотник»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/supremacyHunter.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "supremacyHunter",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/supremacyHunter.png",
+      "condition": null,
+      "description": "Награждается игрок, уничтоживший наибольшее суммарное количество боевых машин на технике с VI по X уровень за первый сезон соревнований «Превосходство»."
+    },
+    "continentalContender": {
+      "name": "«Финалист Битвы континентов»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/continentalContender.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "continentalContender",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/continentalContender.png",
+      "condition": null,
+      "description": "Выдаётся всем игрокам региона, получившего третье место в глобальном игровом событии «Битва континентов» в октябре 2015 г. Это была грандиозная битва, и вы по праву заслужили своё место на пьедестале почёта!"
+    },
+    "steelwall": {
+      "name": "«Стальная cтена»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/steelwall.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "steelwall",
+      "order": 201,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/steelwall.png",
+      "condition": "• Выжить в бою.\n• При равном количестве полученного потенциального урона награждается игрок, получивший больше попаданий.\n• При равном количестве полученного потенциального урона и попаданий награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Получить не менее 1 000 единиц потенциального урона и не менее 11 попаданий."
+    },
+    "supremacyLegend": {
+      "name": "«Легенда»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/supremacyLegend.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "supremacyLegend",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/supremacyLegend.png",
+      "condition": null,
+      "description": "Награждается игрок, нанёсший наибольшее суммарное количество урона на технике с VI по X уровень за первый сезон соревнований «Превосходство»."
+    },
+    "punisher": {
+      "name": "«Мститель»",
+      "image_big": null,
+      "section": "platoon",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/punisher1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/punisher1.png",
+        "name": "«Мститель»\n I степени",
+        "description": "Ликвидировать противника, уничтожившего игрока вашего взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/punisher2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/punisher2.png",
+        "name": "«Мститель»\n II степени",
+        "description": "Ликвидировать противника, уничтожившего игрока вашего взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/punisher3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/punisher3.png",
+        "name": "«Мститель»\n III степени",
+        "description": "Ликвидировать противника, уничтожившего игрока вашего взвода."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/punisher4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/punisher4.png",
+        "name": "«Мститель»\n IV степени",
+        "description": "Ликвидировать противника, уничтожившего игрока вашего взвода."
+      }],
+      "achievement_id": "punisher",
+      "order": 1057,
+      "image": null,
+      "condition": "• IV степени – 1\n• III степени – 10\n• II степени – 100\n• I степени – 1 000",
+      "description": "Ликвидировать противника, уничтожившего игрока вашего взвода."
+    },
+    "eSport": {
+      "name": "«В честь Blitz Twister Cup»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/eSport.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "eSport",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/eSport.png",
+      "condition": "• Награждаются все игроки, сыгравшие хотя бы 1 бой в период проведения турнира.",
+      "description": "Уникальная награда, посвящённая главному ежегодному международному турниру по World of Tanks Blitz."
+    },
+    "platinumTwisterMark": {
+      "name": "«Платиновая медаль сезона «Твистер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumTwisterMark.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumTwisterMark",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumTwisterMark.png",
+      "condition": "• Необходимо сыграть не менее 20 боёв, находясь в Платиновой лиге во время сезона.\n• Выдаётся за максимальную лигу по итогам сезона.",
+      "description": null
+    },
+    "goldClanRibbonNA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldClanRibbonNA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldClanRibbonNA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldClanRibbonNA.png",
+      "condition": "Награждаются все игроки кланов, занявших 6–16 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "medalPoppel": {
+      "name": "Медаль Попеля",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalPoppel1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalPoppel1.png",
+        "name": "Медаль Попеля\n I степени",
+        "description": "За количество обнаруженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalPoppel2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalPoppel2.png",
+        "name": "Медаль Попеля\n II степени",
+        "description": "За количество обнаруженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalPoppel3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalPoppel3.png",
+        "name": "Медаль Попеля\n III степени",
+        "description": "За количество обнаруженной техники противника."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalPoppel4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalPoppel4.png",
+        "name": "Медаль Попеля\n IV степени",
+        "description": "За количество обнаруженной техники противника."
+      }],
+      "achievement_id": "medalPoppel",
+      "order": 1404,
+      "image": null,
+      "condition": "• IV степени – 20\n• III степени – 200\n• II степени – 2 000\n• I степени – 20 000",
+      "description": "За количество обнаруженной техники противника."
+    },
+    "mechanicEngineer6": {
+      "name": "«Инженер-механик: Япония»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer6.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer6",
+      "order": 1206,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer6.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков Японии."
+    },
+    "mechanicEngineer4": {
+      "name": "«Инженер-механик: Франция»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer4.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer4",
+      "order": 1204,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer4.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков Франции."
+    },
+    "goldTwisterMedalSEA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldTwisterMedalSEA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldTwisterMedalSEA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldTwisterMedalSEA.png",
+      "condition": "• Награждаются игроки кланов, занявших 10–27 место в Зале славы среди IX–X уровней техники по итогам сезона.\n• Игрок должен получить не менее 10 Кубков IX–X.",
+      "description": null
+    },
+    "mechanicEngineer2": {
+      "name": "«Инженер-механик: США»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer2.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer2",
+      "order": 1202,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer2.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков США."
+    },
+    "mechanicEngineer3": {
+      "name": "«Инженер-механик: Китай»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer3.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer3",
+      "order": 1203,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer3.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков Китая."
+    },
+    "mechanicEngineer0": {
+      "name": "«Инженер-механик: СССР»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer0.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer0",
+      "order": 1200,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer0.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков СССР."
+    },
+    "mechanicEngineer1": {
+      "name": "«Инженер-механик: Германия»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer1.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer1",
+      "order": 1201,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer1.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков Германии."
+    },
+    "mechanicEngineer5": {
+      "name": "«Инженер-механик: Великобритания»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mechanicEngineer5.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mechanicEngineer5",
+      "order": 1205,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mechanicEngineer5.png",
+      "condition": "• Неисследованные модули не являются препятствием.",
+      "description": "Исследовать всю технику в Дереве танков Великобритании."
+    },
+    "medalTarczay": {
+      "name": "Медаль Тарцая",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalTarczay.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalTarczay",
+      "order": 800,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalTarczay.png",
+      "condition": "• Победить в бою.\n• Выжить в бою.\n• Учёт уничтоженных машин противника начинается после получения всех перечисленных повреждений.",
+      "description": "Уничтожить не менее 5 машин противника, получив не менее 5 критических повреждений и потеряв 80% прочности."
+    },
+    "sinai": {
+      "name": "«Лев Синая»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/sinai.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "sinai",
+      "order": 1013,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/sinai.png",
+      "condition": "\t• ИС\n\t• ИС-3\n\t• ИС-3 Защитник\n\t• ИС-4\n\t• ИС-6\n\t• ИС-6 Бесстрашный\n\t• ИС-7\n\t• ИС-8\n\t• ИСУ-152\n\t• Объект 263\n\t• Объект 268\n\t• Объект 704\n\t• ИСУ-122С\n\t• ИС-2\n\t• ИС-2Ш\n\t• ИС-5\n\n• Засчитывается сумма результатов по всем машинам.\n• В общем зачёте повторно полученные награды суммируются.",
+      "description": "Уничтожить 100 танков ИС или машин на их базе.\nЗасчитываются:"
+    },
+    "pattonValley": {
+      "name": "«Долина Паттонов»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/pattonValley.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "pattonValley",
+      "order": 1011,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/pattonValley.png",
+      "condition": "\t• M46 Patton\n\t• M48A1 Patton III\n\t• M60\n\n• Засчитывается сумма результатов по всем машинам.\n• В общем зачёте повторно полученные награды суммируются.",
+      "description": "Уничтожить 100 танков Patton.\nЗасчитываются:"
+    },
+    "medalDeLanglade": {
+      "name": "Медаль де Ланглада",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalDeLanglade.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalDeLanglade",
+      "order": 611,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalDeLanglade.png",
+      "condition": "• Противник должен находиться в круге захвата базы.\n• Захват может быть как последовательным, так и одновременным.",
+      "description": "Уничтожить в одном бою не менее 3 машин противника, захватывающих базу."
+    },
+    "diamondTwisterMedal": {
+      "name": "«Бриллиантовый орден сезона «Твистер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/diamondTwisterMedal.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "diamondTwisterMedal",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/diamondTwisterMedal.png",
+      "condition": "• Награждаются игроки кланов, занявших 1–3 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».\n• Игрок должен получить не менее 100 Кубков IX–X.",
+      "description": null
+    },
+    "beasthunter": {
+      "name": "«Зверобой»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/beasthunter.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "beasthunter",
+      "order": 1012,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/beasthunter.png",
+      "condition": "\t• Tiger II\n\t• Panther\n\t• Panther II\n\t• Panther\/M10\n\t• Panther 8,8\n\t• Jagdpanther\n\t• Jagdpanther II\n\t• Tiger (P)\n\t• Tiger I\n\t• Jagdtiger\n\t• Jagdtiger 8,8\n\t• Новогодний Jagdtiger 8,8\n\t• Leopard Prototyp A\n\t• Leopard 1\n\t• Löwe\n\t• Kuro Mori Mine\n\t• VK 16.02 Leopard\n\n• Засчитывается сумма результатов по всем машинам.\n• В общем зачёте повторно полученные награды суммируются.",
+      "description": "Уничтожить 100 машин «семейства кошачьих».\nЗасчитываются:"
+    },
+    "kamikaze": {
+      "name": "«Камикадзе»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/kamikaze.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "kamikaze",
+      "order": 703,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/kamikaze.png",
+      "condition": "• Машина противника должна быть выше уровнем.\n• Не более одной награды на игрока за бой.",
+      "description": "Уничтожить противника тараном."
+    },
+    "olimpicBronze": {
+      "name": "«Блиц-игры: бронза»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/olimpicBronze.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "olimpicBronze",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/olimpicBronze.png",
+      "condition": null,
+      "description": "• Уникальная награда для глобального игрового события «Блиц-игры 2016».\n• Награждаются все участники «Блиц-игр» при достижении 1\/3 общего прогресса."
+    },
+    "medalOskin": {
+      "name": "Медаль Оськина",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalOskin.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalOskin",
+      "order": 603,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalOskin.png",
+      "condition": "• Уничтоженная техника должна превосходить боевую машину игрока как минимум на 1 уровень.",
+      "description": "Уничтожить 3 машины противника в одном бою, управляя средним танком."
+    },
+    "invincible": {
+      "name": "«Неуязвимый»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/invincible.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "invincible",
+      "order": 702,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/invincible.png",
+      "condition": "• Серия ведётся для каждой единицы техники отдельно и может продолжиться в следующем бою на этой же машине.\n• В общий зачёт идёт максимальная серия.",
+      "description": "Не получить урона в 5 боях подряд."
+    },
+    "platinumClanRibbonNA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumClanRibbonNA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumClanRibbonNA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumClanRibbonNA.png",
+      "condition": "Награждаются все игроки кланов, занявших 4–5 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».",
+      "description": null
+    },
+    "platinumTwisterMedalRU": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumTwisterMedalRU.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumTwisterMedalRU",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumTwisterMedalRU.png",
+      "condition": "• Награждаются игроки кланов, занявших 4–25 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».\n• Игрок должен получить не менее 100 Кубков IX–X.",
+      "description": null
+    },
+    "continentalViceChampion": {
+      "name": "«Вице-чемпион континентов»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/continentalViceChampion.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "continentalViceChampion",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/continentalViceChampion.png",
+      "condition": null,
+      "description": "Выдаётся всем игрокам региона, получившего второе место в глобальном игровом событии «Битва континентов» в октябре 2015 г. Всего один шаг отделяет вас от чемпионского титула, но вам достаётся заслуженная медаль вице-чемпиона!"
+    },
+    "olimpicSilver": {
+      "name": "«Блиц-игры: серебро»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/olimpicSilver.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "olimpicSilver",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/olimpicSilver.png",
+      "condition": null,
+      "description": "• Уникальная награда для глобального игрового события «Блиц-игры 2016».\n• Награждаются все участники «Блиц-игр» при достижении 2\/3 общего прогресса."
+    },
+    "continentalCompetitor": {
+      "name": "«Участник Битвы континентов»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/continentalCompetitor.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "continentalCompetitor",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/continentalCompetitor.png",
+      "condition": null,
+      "description": "Выдаётся всем игрокам региона, получившего четвёртое место в глобальном игровом событии «Битва континентов» в октябре 2015 г. Храбрость, проявленная вами в боях, заслуживает награды!"
+    },
+    "mousebane": {
+      "name": "«Гроза мышей»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/mousebane.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "mousebane",
+      "order": 1010,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/mousebane.png",
+      "condition": "• Засчитывается сумма результатов по всем машинам.\n• В общем зачёте повторно полученные награды суммируются.",
+      "description": "Уничтожить 10 танков PzKpfw VIII Maus."
+    },
+    "medalBrunoPietro": {
+      "name": "Медаль Бруно",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalBrunoPietro.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalBrunoPietro",
+      "order": 801,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalBrunoPietro.png",
+      "condition": "• Победить в бою.\n• Выжить в бою.\n• Учёт уничтоженных машин противника начинается после получения всех перечисленных повреждений.",
+      "description": "Уничтожить 3–4 машины противника, получив не менее 5 критических повреждений и потеряв 80% прочности."
+    },
+    "goldTwisterMark": {
+      "name": "«Золотая медаль сезона «Твистер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/goldTwisterMark.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "goldTwisterMark",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/goldTwisterMark.png",
+      "condition": "• Необходимо сыграть не менее 20 боёв, находясь в Золотой лиге во время сезона.\n• Выдаётся за максимальную лигу по итогам сезона.",
+      "description": null
+    },
+    "collectorWarhammer": {
+      "name": "«Warhammer 40,000: Коллекционер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/collectorWarhammer.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "collectorWarhammer",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/collectorWarhammer.png",
+      "condition": "\t• Vindicator\n\t• Predator\n\n• Награждаются игроки, у которых на момент окончания события «Warhammer 40,000: Битва за Макрагг» в Ангаре находятся все перечисленные машины.",
+      "description": "Уникальная награда для игроков, собравших 2 боевые машины из коллекции «Warhammer 40,000»:"
+    },
+    "medalLeClerc": {
+      "name": "Медаль Леклерка",
+      "image_big": null,
+      "section": "step",
+      "options": [{
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLeClerc1.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLeClerc1.png",
+        "name": "Медаль Леклерка\n I степени",
+        "description": "За суммарное количество очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLeClerc2.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLeClerc2.png",
+        "name": "Медаль Леклерка\n II степени",
+        "description": "За суммарное количество очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLeClerc3.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLeClerc3.png",
+        "name": "Медаль Леклерка\n III степени",
+        "description": "За суммарное количество очков захвата базы."
+      }, {
+        "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalLeClerc4.png",
+        "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalLeClerc4.png",
+        "name": "Медаль Леклерка\n IV степени",
+        "description": "За суммарное количество очков захвата базы."
+      }],
+      "achievement_id": "medalLeClerc",
+      "order": 1406,
+      "image": null,
+      "condition": "• Победить в бою.\n• Засчитываются все очки захвата, набранные за один бой, за исключением очков захвата, полученных в режиме «Превосходство».\n\n• IV степени – 30\n• III степени – 300\n• II степени – 3 000\n• I степени – 30 000",
+      "description": "За суммарное количество очков захвата базы."
+    },
+    "medalCommunityChampion": {
+      "name": "«Чемпион региона»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalCommunityChampion.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "medalCommunityChampion",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalCommunityChampion.png",
+      "condition": null,
+      "description": "Награждается игрок, получивший призовое место в соревнованиях европейского региона. Возможность получения медали указывается в правилах соревнования."
+    },
+    "diamondTwisterMark": {
+      "name": "«Бриллиантовая медаль сезона «Твистер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/diamondTwisterMark.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "diamondTwisterMark",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/diamondTwisterMark.png",
+      "condition": "• Необходимо сыграть не менее 20 боёв, находясь в Бриллиантовой лиге во время сезона.\n• Выдаётся за максимальную лигу по итогам сезона.",
+      "description": null
+    },
+    "platinumTwisterMedalNA": {
+      "name": null,
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/platinumTwisterMedalNA.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "platinumTwisterMedalNA",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/platinumTwisterMedalNA.png",
+      "condition": "• Награждаются игроки кланов, занявших 4–5 место в Зале славы среди IX–X уровней техники по итогам сезона «Твистер».\n• Игрок должен получить не менее 100 Кубков IX–X.",
+      "description": null
+    },
+    "handOfDeath": {
+      "name": "«Коса Смерти»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/handOfDeath.png",
+      "section": "title",
+      "options": null,
+      "achievement_id": "handOfDeath",
+      "order": 1002,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/handOfDeath.png",
+      "condition": "• Серия ведётся для каждой единицы техники отдельно и может продолжиться в следующем бою на этой же машине.\n• В общий зачёт идёт максимальная серия.\n• Выдаётся в момент окончания очередной рекордной серии.",
+      "description": "Уничтожить подряд не менее 3 машин противника, затратив на вторую и последующие по одному снаряду."
+    },
+    "huntsman": {
+      "name": "«Егерь»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/huntsman.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "huntsman",
+      "order": 300,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/huntsman.png",
+      "condition": null,
+      "description": "Уничтожить все лёгкие танки противника в одном бою, но не менее 3."
+    },
+    "camper": {
+      "name": "«Танкист-снайпер»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/camper.png",
+      "section": "battle",
+      "options": null,
+      "achievement_id": "camper",
+      "order": 6,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/camper.png",
+      "condition": "• Произвести не менее 8 выстрелов.\n• Не менее 80% попаданий должны быть с нанесением урона.\n• Учитывается урон технике противника и повреждения модулей.\n• Общая точность стрельбы за бой должна быть не менее 85%.\n• Нанесённый урон должен превышать количество очков прочности машины игрока и быть не менее 1000 единиц.\n• При равном количестве нанесённого урона награждается игрок, получивший наибольшее количество очков опыта за бой.\n• Выдаётся только одна награда за бой.",
+      "description": "Нанести наибольшее количество урона за бой с дистанции не менее 250 м."
+    },
+    "medalNikolas": {
+      "name": "Медаль Николса",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/medalNikolas.png",
+      "section": "epic",
+      "options": null,
+      "achievement_id": "medalNikolas",
+      "order": 602,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/medalNikolas.png",
+      "condition": "• Уничтоженная техника должна превосходить боевую машину игрока как минимум на 1 уровень.",
+      "description": "Уничтожить не менее 4 машин противника в одном бою, управляя средним танком."
+    },
+    "androidTest": {
+      "name": "Участник Android теста WoT Blitz",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/androidTest.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "androidTest",
+      "order": 1058,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/androidTest.png",
+      "condition": null,
+      "description": "За участие в тестировании Android версии World of Tanks Blitz."
+    },
+    "sturdy": {
+      "name": "«Спартанец»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/sturdy.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "sturdy",
+      "order": 1008,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/sturdy.png",
+      "condition": "• Выжить в бою.",
+      "description": "Получить рикошет или непробитие от противника при прочности машины менее 10%."
+    },
+    "championofNewStart": {
+      "name": "«Рекордсмен сезона «Новый старт»",
+      "image_big": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/big\/championofNewStart.png",
+      "section": "commemorative",
+      "options": null,
+      "achievement_id": "championofNewStart",
+      "order": null,
+      "image": "http:\/\/glossary-ru-static.gcdn.co\/icons\/wotb\/current\/achievements\/championofNewStart.png",
+      "condition": "• Награждаются все игроки, сыгравшие не менее 500 боёв в период сезона «Новый старт» в 2017 г.",
+      "description": "Уникальная награда, посвящённая сезону «Новый старт» в World of Tanks Blitz."
+    }
+  }
+}

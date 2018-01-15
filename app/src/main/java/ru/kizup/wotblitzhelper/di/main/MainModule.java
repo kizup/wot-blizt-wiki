@@ -2,6 +2,8 @@ package ru.kizup.wotblitzhelper.di.main;
 
 import android.content.Context;
 
+import com.jakewharton.picasso.OkHttp3Downloader;
+
 import dagger.Module;
 import dagger.Provides;
 import ru.kizup.wotblitzhelper.business.main.IMainInteractor;
@@ -33,7 +35,8 @@ public class MainModule {
 
     @Provides
     @MainScope
-    IMainInteractor provideMainInteractor(IMainRepository repository, Context context) {
+    IMainInteractor provideMainInteractor(IMainRepository repository,
+                                          Context context) {
         return new MainInteractor(repository, context);
     }
 

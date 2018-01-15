@@ -99,7 +99,8 @@ public class CrewSkillsFragment extends BaseFragment
         mCrewSkillsPresenter.bindView(this);
         mCrewSkillsPresenter.setScreenOrientation(getResources().getConfiguration().orientation);
         mCrewSkillsPresenter.loadCrewSkills();
-        GridLayoutManager manager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager manager = new GridLayoutManager(getContext(),
+                getResources().getInteger(R.integer.vehicles_span_count));
 
         mCrewSkillsAdapter.setLayoutManager(manager);
         mCrewSkillsRecyclerView.setLayoutManager(manager);

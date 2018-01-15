@@ -58,7 +58,7 @@ public class NextTanksAdapter extends RecyclerView.Adapter<NextTanksAdapter.Item
     public void onBindViewHolder(ItemViewHolder viewHolder, int position) {
         ShortVehicleInfoUIModel model = mItems.get(position);
         viewHolder.mVehicleNameTextView.setText(model.getName());
-        viewHolder.mVehicleTierTextView.setText(RomanNumber.toRoman(Integer.parseInt(model.getTier())));
+        viewHolder.mVehicleTierTextView.setText(RomanNumber.toRoman(model.getTier()));
         viewHolder.itemView.setOnClickListener(v -> {
             if (mItemClickListener != null) mItemClickListener.onItemClick(model);
         });

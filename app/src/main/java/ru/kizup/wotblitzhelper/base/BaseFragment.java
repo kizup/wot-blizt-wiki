@@ -1,13 +1,16 @@
 package ru.kizup.wotblitzhelper.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -26,6 +29,14 @@ public abstract class BaseFragment extends Fragment
     public abstract @LayoutRes int getLayoutId();
 
     public abstract void onPostViewCreated(View view, @Nullable Bundle savedInstanceState);
+
+    private OnBaseFragmentInteractionListener mBaseFragmentInteractionListener;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mBaseFragmentInteractionListener = (OnBaseFragmentInteractionListener) context;
+    }
 
     @Nullable
     @Override
@@ -69,12 +80,25 @@ public abstract class BaseFragment extends Fragment
         getBaseActivity().setSupportActionBar(toolbar);
     }
 
+    protected void setShowBackArrow() {
+        ActionBar actionBar = getBaseActivity().getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
     protected void showFragment(Fragment fragment) {
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.addToBackStack(null);
         transaction.setTransition(FragmentTransaction.TRANSIT_ENTER_MASK);
         transaction.replace(R.id.fl_container, fragment);
         transaction.commit();
+    }
+
+    public interface OnBaseFragmentInteractionListener {
+
+        void onBackArrowClicked();
+
     }
 
 }
